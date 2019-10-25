@@ -23,8 +23,9 @@ repositories {
 }
 
 dependencies {
-	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.0-M1'
+	
 
+	testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.6.0-M1'
 	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
