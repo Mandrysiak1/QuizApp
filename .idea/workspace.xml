@@ -104,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="248" selection-start-column="248" selection-end-column="248" />
+              <caret column="48" lean-forward="true" selection-start-column="48" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -312,7 +312,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572026600214" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572027515472" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -392,12 +392,12 @@
       <option name="presentableId" value="Default" />
       <updated>1571935042631</updated>
       <workItem from="1571935046158" duration="7026000" />
-      <workItem from="1572022406400" duration="2624000" />
+      <workItem from="1572022406400" duration="3562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9650000" />
+    <option name="totallyTimeSpent" value="10588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -663,7 +663,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="248" selection-start-column="248" selection-end-column="248" />
+          <caret column="48" lean-forward="true" selection-start-column="48" selection-end-column="48" />
         </state>
       </provider>
     </entry>
