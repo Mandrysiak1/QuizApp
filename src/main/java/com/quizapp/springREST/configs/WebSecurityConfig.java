@@ -1,5 +1,6 @@
 package com.quizapp.springREST.configs;
 
+import com.quizapp.springREST.services.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -14,7 +15,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
-import com.quizapp.springREST.services.CustomUserDetailsService;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -32,18 +32,30 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         UserDetailsService userDetailsService = mongoUserDetails();
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
 
+
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+       // http.sessionManagement().maximumSessions(1).sessionRegistry(sessionRegistry());
+
         http.httpBasic().disable().csrf().disable().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authorizeRequests()
                 .antMatchers("/api/auth/login").permitAll().antMatchers("/api/auth/register").permitAll()
-                .antMatchers("/api/products/**").hasAuthority("ADMIN").anyRequest().authenticated().and().csrf()
+                    .antMatchers("/api/products/**").hasAuthority("ADMIN").anyRequest().authenticated().and().csrf()
                 .disable().exceptionHandling().authenticationEntryPoint(unauthorizedEntryPoint()).and()
                 .apply(new JwtConfigurer(jwtTokenProvider));
     }
 
+//    @Bean
+//    public SessionRegistry sessionRegistry() {
+//        return new SessionRegistryImpl();
+//    }
+//
+//    @Bean
+//    public ServletListenerRegistrationBean<HttpSessionEventPublisher> httpSessionEventPublisher() {
+//        return new ServletListenerRegistrationBean<HttpSessionEventPublisher>(new HttpSessionEventPublisher());
+//    }
 
     @Bean
     public PasswordEncoder bCryptPasswordEncoder() {

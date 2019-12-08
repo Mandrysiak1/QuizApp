@@ -1,27 +1,20 @@
 package com.quizapp.springREST.configs;
 
 import com.quizapp.springREST.Model.Role;
-import java.util.Base64;
-import java.util.Date;
-import java.util.Set;
-
-import javax.annotation.PostConstruct;
-import javax.servlet.http.HttpServletRequest;
-
+import com.quizapp.springREST.services.CustomUserDetailsService;
+import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jws;
-import io.jsonwebtoken.JwtException;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import com.quizapp.springREST.services.CustomUserDetailsService;
+import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
+import java.util.Base64;
+import java.util.Date;
+import java.util.Set;
 
 
 @Component

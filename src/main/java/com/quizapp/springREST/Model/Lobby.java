@@ -12,7 +12,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-public class Lobby {    @Autowired
+public class Lobby {
+    @Autowired
     @Qualifier("sessionRegistry")
     private SessionRegistry sessionRegistry;
 
