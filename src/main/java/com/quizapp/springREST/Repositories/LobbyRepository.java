@@ -2,12 +2,12 @@ package com.quizapp.springREST.Repositories;
 
 import com.quizapp.springREST.Model.Lobby;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
-@NoArgsConstructor
-public class LobbyRepositories {
+@Repository
+public class LobbyRepository {
 
     @Getter
     private ArrayList<Lobby> lobbies = new ArrayList<>();
@@ -22,8 +22,9 @@ public class LobbyRepositories {
         return lobbies;
     }
 
+    public Lobby GetLobbyByID(String ID){
 
-
-
+        return lobbies.stream().filter(e->e.getId().equals(ID)).findFirst().orElse(null);
+    }
 
 }

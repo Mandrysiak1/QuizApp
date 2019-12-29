@@ -21,6 +21,12 @@ public class User {
     private boolean enabled;
     @DBRef
     private Set<Role> roles;
+
+    @DBRef
+    private Set<User> friends;
+
+
+
     public String getId() {
         return id;
     }

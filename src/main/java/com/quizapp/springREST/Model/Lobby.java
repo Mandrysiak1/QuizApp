@@ -2,14 +2,12 @@ package com.quizapp.springREST.Model;
 
 
 import lombok.Getter;
-import org.springframework.util.AlternativeJdkIdGenerator;
-import org.springframework.util.IdGenerator;
+import org.springframework.data.annotation.Id;
 
 import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
 
 
+@Getter
 public class Lobby {
 
 //    @Autowired
@@ -17,20 +15,18 @@ public class Lobby {
 //    private SessionRegistry sessionRegistry;
 
     @Getter
-    private Set<Player> players;
-
-    @Getter
-    private UUID uuid;
+    private HashSet<User> players;
+    @Id
+    private String id;
 
     public Lobby() {
         players = new HashSet<>();
 
-        IdGenerator generator = new AlternativeJdkIdGenerator();
-        uuid = generator.generateId();
+
     }
 
 
-    public boolean addPlayer(Player player)
+    public boolean addPlayer(User player)
     {
         return players.add(player);
     }

@@ -2,14 +2,17 @@ package com.quizapp.springREST.services;
 
 import com.quizapp.springREST.Model.Lobby;
 import com.quizapp.springREST.Model.Player;
-import com.quizapp.springREST.Repositories.LobbyRepositories;
+import com.quizapp.springREST.Model.User;
+import com.quizapp.springREST.Repositories.LobbyRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+@Service
 public class GameLobbyService {
 
 
-    private LobbyRepositories repositories = new LobbyRepositories();
+    private LobbyRepository repositories = new LobbyRepository();
 
     public Lobby createLobby()
     {
@@ -27,7 +30,7 @@ public class GameLobbyService {
     }
 
 
-    public void addPlayer(Player player,Lobby lobby){
+    public void addPlayer(User player, Lobby lobby){
 
         if(!lobby.addPlayer(player)){
             throw new  IllegalArgumentException("Player in lobby already");
@@ -41,9 +44,7 @@ public class GameLobbyService {
         }
     }
 
-    public void startGame(Lobby lobby)
-    {
-
-    }
-
+  public Lobby getLobbyById(String ID){
+      return  repositories.GetLobbyByID(ID);
+  }
 }

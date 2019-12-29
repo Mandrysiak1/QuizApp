@@ -19,7 +19,7 @@ public class GameLobbyController {
     @GetMapping("/new")
     public NewLobbyResponse startNewLobby()
     {
-        return new NewLobbyResponse(gameController.createLobby().getUuid());
+        return new NewLobbyResponse(gameController.createLobby().getId());
     }
 
 
