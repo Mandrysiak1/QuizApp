@@ -2,38 +2,35 @@ package com.quizapp.springREST.controllers;
 
 
 import com.quizapp.springREST.Model.Lobby;
-import com.quizapp.springREST.Repositories.LobbyRepositories;
+import com.quizapp.springREST.services.GameLobbyService;
 import com.quizapp.springREST.responses.NewLobbyResponse;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.ArrayList;
 
 @RestController
 @RequestMapping("api/lobby")
 public class GameLobbyController {
 
 
-    private LobbyRepositories repositories = new LobbyRepositories();
+    private GameLobbyService gameController = new GameLobbyService();
 
     @GetMapping("/new")
     public NewLobbyResponse startNewLobby()
     {
-
-        Lobby lobby = new Lobby();
-
-        repositories.addLobby(lobby);
-
-        return new NewLobbyResponse(lobby.getUuid());
-
+        return new NewLobbyResponse(gameController.createLobby().getUuid());
     }
 
-    @GetMapping("/getAllLobbies")
-    public List<Lobby> getAllLobbies()
+
+    @RequestMapping(value = "/getAllLobbies",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody ArrayList<Lobby> getAllLobbies()
     {
 
-        return repositories.getAllLobbies();
+        return gameController.returnAllLobbies();
+
     }
+
+
 
 }

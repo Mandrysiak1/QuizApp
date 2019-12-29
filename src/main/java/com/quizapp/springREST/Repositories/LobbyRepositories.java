@@ -17,7 +17,7 @@ public class LobbyRepositories {
         lobbies.add(lobby);
     }
 
-    public ArrayList getAllLobbies()
+    public ArrayList<Lobby> getAllLobbies()
     {
         return lobbies;
     }
