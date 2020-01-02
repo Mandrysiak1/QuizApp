@@ -6,9 +6,8 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 @Repository
-public interface QuestionsRepository extends MongoRepository<HashMap<Society, ArrayList<Question>>,String>
+public interface QuestionsRepository extends MongoRepository<Society,ArrayList<Question>>
 {
 }

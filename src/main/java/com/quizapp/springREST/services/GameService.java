@@ -1,9 +1,12 @@
 package com.quizapp.springREST.services;
 
 import com.quizapp.springREST.Model.Game;
+import com.quizapp.springREST.Model.GameState;
 import com.quizapp.springREST.Model.Lobby;
+import com.quizapp.springREST.Model.PlayerAnswers;
 import com.quizapp.springREST.Repositories.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 
 
@@ -18,13 +21,26 @@ public class GameService {
     @Autowired
     GameRepository gameRepository;
 
-    public void startNewGame(String lobbyID)
+    @Autowired
+    SimpMessagingTemplate template;
+
+
+    public Game startNewGame(String lobbyID)
     {
-        gameRepository.AddNewGame(new Game(gameLobbyService.getLobbyById(lobbyID).getPlayers()));
+       return gameRepository.AddNewGame(new Game(gameLobbyService.getLobbyById(lobbyID).getPlayers()));
     }
 
 
+    public Game proceedAnserws(String game_id, PlayerAnswers answers) {
+       return gameRepository.getActiveGameByID(game_id).proceedAnserws(answers);
+    }
 
+    public Game GetGameByGameID(String game_id)
+    {
+       return gameRepository.getActiveGameByID(game_id);
+    }
 
-
+    public void sendMessage(String s, GameState startNextRound) {
+        template.convertAndSend("/games/{game_id}",startNextRound);
+    }
 }

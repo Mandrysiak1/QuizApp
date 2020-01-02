@@ -10,9 +10,14 @@ public class GameRepository {
 
     private ArrayList<Game> activeGames = new ArrayList<>();
 
-    public void AddNewGame( Game game)
+    public Game AddNewGame( Game game)
     {
         activeGames.add(game);
+        return game;
     }
 
+    public Game getActiveGameByID(String game_id)
+    {
+        return activeGames.stream().filter(e->e.getId().equals(game_id)).findFirst().orElse(null);
+    }
 }

@@ -36,4 +36,6 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok:1.18.10'
 	annotationProcessor 'org.projectlombok:lombok:1.18.10'
 
+	implementation("org.springframework.boot:spring-boot-starter-websocket")
+
 }
