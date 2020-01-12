@@ -10,11 +10,11 @@ import java.io.IOException;
 
 public class WebSocketHandler extends AbstractWebSocketHandler {
 
-    @SubscribeMapping("/games/{game_id}")
+    @SubscribeMapping("/games/123")
     public String subscribeToGame(
             @DestinationVariable(value = "game_id") String game_id) {
 
-        return "aaa " + game_id;
+        return "aaa " + 123;
     }
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws IOException {
