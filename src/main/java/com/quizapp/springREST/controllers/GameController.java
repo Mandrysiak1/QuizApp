@@ -1,5 +1,6 @@
 package com.quizapp.springREST.controllers;
 
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.stereotype.Controller;
 
@@ -12,6 +13,7 @@ public class GameController {
 //
 //
     @SubscribeMapping("/games/123")
+    @SendTo("/topic/greetings")
     public String subscribeToGame() {
 
         return "aaa " + 123;
