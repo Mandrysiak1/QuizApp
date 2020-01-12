@@ -1,5 +1,6 @@
 package com.quizapp.springREST.controllers;
 
+import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.stereotype.Controller;
 
 @Controller
@@ -10,12 +11,11 @@ public class GameController {
 //    GameService service;
 //
 //
-//    @SubscribeMapping("/games/{game_id}")
-//    public String subscribeToGame(
-//            @DestinationVariable(value = "game_id") String game_id) {
-//
-//        return "aaa " + game_id;
-//    }
+    @SubscribeMapping("/games/123")
+    public String subscribeToGame() {
+
+        return "aaa " + 123;
+    }
 //
 //
 //    @MessageMapping("/games/{game_id}/start")
