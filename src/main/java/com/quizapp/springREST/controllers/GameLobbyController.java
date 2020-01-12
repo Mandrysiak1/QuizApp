@@ -19,7 +19,6 @@ public class GameLobbyController {
     @GetMapping("/new")
     public NewLobbyResponse startNewLobby()
     {
-        System.out.println("Aaaaaaaaaasxcsscdcdscsdssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss");
         return new NewLobbyResponse(gameController.createLobby().getId());
     }
 
