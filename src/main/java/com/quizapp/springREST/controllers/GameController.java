@@ -1,15 +1,16 @@
 package com.quizapp.springREST.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.simp.annotation.SubscribeMapping;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class GameController {
 
-//    @Autowired
-//    private SimpMessagingTemplate messageSender;
+    @Autowired
+    private SimpMessagingTemplate messageSender;
 
 //    @Autowired
 //    GameService service;
@@ -19,12 +20,12 @@ public class GameController {
     public void simple(@DestinationVariable String game) {
 
         System.out.println("AAAAAAAAAAAAAAAAAAAAAA WYKONANE");
-//        messageSender.convertAndSend("/topic/websocket/game/", "xd to dziala xd");
+        messageSender.convertAndSend("/topic/websocket/game/", "xd to dziala xd");
     }
-    @SubscribeMapping("/webosocket/{game}")
-    public String complex(@DestinationVariable String game) {
-        return "xd to dziala xd chyba nie iwem";
-    }
+//    @SubscribeMapping("/webosocket/{game}")
+//    public String complex(@DestinationVariable String game) {
+//        return "xd to dziala xd chyba nie iwem";
+//    }
 //
 //
 //    @MessageMapping("/games/{game_id}/start")
