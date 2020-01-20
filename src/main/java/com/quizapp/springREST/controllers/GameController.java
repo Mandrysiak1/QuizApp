@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.stereotype.Controller;
 
 @Controller
@@ -16,16 +17,16 @@ public class GameController {
 //    GameService service;
 //
 //
-    @MessageMapping("/webosocket/{game}")
+    @MessageMapping("/{game}")
     public void simple(@DestinationVariable String game) {
 
         System.out.println("AAAAAAAAAAAAAAAAAAAAAA WYKONANE");
-        messageSender.convertAndSend("/topic/websocket/game/", "xd to dziala xd");
+        messageSender.convertAndSend("/topic/websocket/game/", new Message("idk","lol " + game));
     }
-//    @SubscribeMapping("/webosocket/{game}")
-//    public String complex(@DestinationVariable String game) {
-//        return "xd to dziala xd chyba nie iwem";
-//    }
+    @SubscribeMapping("/{game}")
+    public Message complex(@DestinationVariable String game) {
+        return new Message("xd to dziala xd chyba nie iwem","tak");
+    }
 //
 //
 //    @MessageMapping("/games/{game_id}/start")
