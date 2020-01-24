@@ -14,13 +14,15 @@ public class GameController {
     @Autowired
     private SimpMessagingTemplate messageSender;
 
-
     @MessageMapping("/hello-msg-mapping")
     @SendTo("/topic/greetings")
     public String echoMessageMapping(String message) {
+        messageSender.convertAndSend("/topic/greetings", "xdxdxd");
+        System.out.println("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
         log.debug("React to hello-msg-mapping");
         return message + " była tya djsoklm";
     }
+
 
 //    @Autowired
 //    GameService service;
