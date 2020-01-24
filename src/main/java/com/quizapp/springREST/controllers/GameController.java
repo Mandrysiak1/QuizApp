@@ -1,10 +1,8 @@
 package com.quizapp.springREST.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.stereotype.Controller;
 
 @Controller
@@ -17,17 +15,25 @@ public class GameController {
 //    GameService service;
 //
 //
-    @MessageMapping("{game}")
-    public void simple(@DestinationVariable String game) {
 
+
+//    @MessageMapping("{game}")
+//    public void simple(@DestinationVariable String game) {
+//
+//        System.out.println("AAAAAAAAAAAAAAAAAAAAAA WYKONANE");
+//        messageSender.convertAndSend("/topic/websocket/game/", new Message("idk","lol " + game));
+//    }
+//    @SubscribeMapping("{game}")
+//    public Message complex(@DestinationVariable String game) {
+//        System.out.println("AAAAAAAAAAAAAAAAAAAAAA ZASUBSKRYBOWANO");
+//        return new Message("xd to dziala xd chyba nie iwem","tak");
+//    }
+
+    @MessageMapping("/greeting")
+    public String handle(String greeting) {
         System.out.println("AAAAAAAAAAAAAAAAAAAAAA WYKONANE");
-        messageSender.convertAndSend("/topic/websocket/game/", new Message("idk","lol " + game));
-    }
-    @SubscribeMapping("{game}")
-    public Message complex(@DestinationVariable String game) {
-        System.out.println("AAAAAAAAAAAAAAAAAAAAAA ZASUBSKRYBOWANO");
-        return new Message("xd to dziala xd chyba nie iwem","tak");
-    }
+            return "[" + "Xd" + " " + greeting;
+        }
 //
 //
 //    @MessageMapping("/games/{game_id}/start")
