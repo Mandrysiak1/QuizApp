@@ -29,9 +29,10 @@ public class GameController {
 //        return new Message("xd to dziala xd chyba nie iwem","tak");
 //    }
 
-    @MessageMapping("/greeting")
+    @MessageMapping("/greetings")
     public String handle(String greeting) {
         System.out.println("AAAAAAAAAAAAAAAAAAAAAA WYKONANE");
+        messageSender.convertAndSend("/topic/greetings", new Message("idk","lol "));
             return "[" + "Xd" + " " + greeting;
         }
 //
