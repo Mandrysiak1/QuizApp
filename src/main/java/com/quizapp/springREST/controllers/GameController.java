@@ -17,14 +17,15 @@ public class GameController {
 //    GameService service;
 //
 //
-    @MessageMapping("/{game}")
+    @MessageMapping("{game}")
     public void simple(@DestinationVariable String game) {
 
         System.out.println("AAAAAAAAAAAAAAAAAAAAAA WYKONANE");
         messageSender.convertAndSend("/topic/websocket/game/", new Message("idk","lol " + game));
     }
-    @SubscribeMapping("/{game}")
+    @SubscribeMapping("{game}")
     public Message complex(@DestinationVariable String game) {
+        System.out.println("AAAAAAAAAAAAAAAAAAAAAA ZASUBSKRYBOWANO");
         return new Message("xd to dziala xd chyba nie iwem","tak");
     }
 //
