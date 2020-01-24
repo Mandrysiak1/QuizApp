@@ -1,15 +1,26 @@
 package com.quizapp.springREST.controllers;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@Slf4j
+@RestController
 public class GameController {
 
     @Autowired
     private SimpMessagingTemplate messageSender;
+
+
+    @MessageMapping("/hello-msg-mapping")
+    @SendTo("/topic/greetings")
+    public String echoMessageMapping(String message) {
+        log.debug("React to hello-msg-mapping");
+        return message + " była tya djsoklm";
+    }
 
 //    @Autowired
 //    GameService service;
@@ -29,12 +40,12 @@ public class GameController {
 //        return new Message("xd to dziala xd chyba nie iwem","tak");
 //    }
 
-    @MessageMapping("/greetings")
+/*    @MessageMapping("/greetings")
     public String handle(String greeting) {
         System.out.println("AAAAAAAAAAAAAAAAAAAAAA WYKONANE");
         messageSender.convertAndSend("/topic/greetings", new Message("idk","lol "));
             return "[" + "Xd" + " " + greeting;
-        }
+        }*/
 //
 //
 //    @MessageMapping("/games/{game_id}/start")
