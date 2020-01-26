@@ -25,4 +25,12 @@ public class Society {
     public Society(String name) {
         Name = name;
     }
+    public void addUser(User x)
+    {
+        users.add(x);
+    }
+    public void removeUser( User x)
+    {
+        users.remove(x);
+    }
 }

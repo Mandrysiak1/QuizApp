@@ -1,6 +1,7 @@
 package com.quizapp.springREST.controllers;
 
 import com.quizapp.springREST.Model.Society;
+import com.quizapp.springREST.Model.User;
 import com.quizapp.springREST.Repositories.UserRepository;
 import com.quizapp.springREST.services.SocietyService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.management.openmbean.InvalidKeyException;
 import java.util.List;
 
 @Controller
@@ -18,22 +20,24 @@ public class SocietiesController {
 
     @Autowired
     SocietyService societyManager;
-
-
     @Autowired
     UserRepository userRepository;
 
 
     @PostMapping("/create")
-    public void CreateNewSociety(@RequestParam String name)
+    public void CreateNewSociety(@RequestParam String name ,@RequestParam String login)
     {
+        Society newSociety = new Society(name);
+        User user = userRepository.findByEmail(login);
+        if (user == null) throw new InvalidKeyException("nie znaleziono użytkownika");
+        newSociety.addUser(userRepository.findByEmail(login));
         societyManager.saveSociety(new Society(name));
     }
 
     @GetMapping("/getUserSocieties")
-    public List<Society> getUserSocieties(@RequestParam String id)
+    public List<Society> getUserSocieties(@RequestParam String login)
     {
-        return societyManager.getAllSocietesRelatedToUser(userRepository.findById(id).get());
+        return societyManager.getAllSocietesRelatedToUser(userRepository.findByEmail(login));
     }
 
     @PostMapping("/leaveSociety")

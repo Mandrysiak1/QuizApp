@@ -17,4 +17,6 @@ public interface SocietyRepository extends MongoRepository<Society,String> {
     Optional<Society> findById(String s);
 
 
+
+
 }

@@ -46,7 +46,7 @@ public class SocietyService {
 
     public void leaveSociety(User user,Society society)
     {
-        society.getUsers().remove(user);
+        society.removeUser(user);
     }
 
     @Scheduled(cron = "0 0 12 * * ?")
