@@ -1,6 +1,7 @@
 package com.quizapp.springREST.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,10 +15,10 @@ class SocketController {
     @Autowired
     SocketService socketService;
 
-    @MessageMapping("/hello-msg-mapping")
-    @SendTo("/topic/greetings")
-    EchoModel echoMessageMapping(String message) {
-        return new EchoModel(message.trim());
+    @MessageMapping("/games/{game_id}")
+    @SendTo("/topic/games/{game_id}")
+    EchoModel echoMessageMapping(@DestinationVariable String game_id, String message) {
+        return new EchoModel(message.trim() + game_id);
     }
 
     @RequestMapping(value = "/hello-convert-and-send", method = RequestMethod.POST)
