@@ -6,4 +6,8 @@ class EchoModel {
         this.echo = echo;
     }
     String echo;
+
+    public String getEcho() {
+        return echo;
+    }
 }
