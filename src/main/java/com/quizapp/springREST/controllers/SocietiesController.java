@@ -31,6 +31,11 @@ public class SocietiesController {
         User user = userRepository.findByEmail(login);
         if (user == null) throw new InvalidKeyException("nie znaleziono użytkownika");
         newSociety.addUser(userRepository.findByEmail(login));
+        for (User x :
+                newSociety.getUsers()) {
+            System.out.println(x.getEmail());
+
+        }
         societyManager.saveSociety(new Society(name));
     }
 

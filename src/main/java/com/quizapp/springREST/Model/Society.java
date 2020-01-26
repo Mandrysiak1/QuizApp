@@ -17,7 +17,7 @@ public class Society {
     private String id;
 
     private String Name;
-    
+
     @DBRef
     private HashSet<User> users = new HashSet<>();
 
