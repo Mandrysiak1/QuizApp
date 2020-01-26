@@ -18,7 +18,7 @@ class SocketController {
     @MessageMapping("/games/{game_id}")
     @SendTo("/topic/games/{game_id}")
     EchoModel echoMessageMapping(@DestinationVariable String game_id, String message) {
-        return new EchoModel(message.trim() + game_id);
+        return new EchoModel(game_id);
     }
 
     @RequestMapping(value = "/hello-convert-and-send", method = RequestMethod.POST)
