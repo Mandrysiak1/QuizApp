@@ -2,6 +2,7 @@ package com.quizapp.springREST.Model;
 
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
@@ -16,7 +17,8 @@ public class Society {
     private String id;
 
     private String Name;
-
+    
+    @DBRef
     private HashSet<User> users = new HashSet<>();
 
     private HashMap<User, ArrayList<Quest>> UserToQuest = new HashMap<>();
