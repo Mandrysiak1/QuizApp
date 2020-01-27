@@ -2,8 +2,10 @@ package com.quizapp.springREST.Model;
 
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,16 +18,26 @@ public class Society {
     @Id
     private String id;
 
-    private String Name;
+    @Field(value="Name")
+    private String name;
 
     @DBRef
     private HashSet<User> users = new HashSet<>();
 
-    private HashMap<User, ArrayList<Quest>> UserToQuest = new HashMap<>();
+
+    private HashMap<User, ArrayList<Quest>> userToQuest = new HashMap<>();
+
+    @PersistenceConstructor
+    public Society(String id, String name, HashSet<User> users, HashMap<User, ArrayList<Quest>> userToQuest) {
+        this.id = id;
+        this.name = name;
+        this.users = users;
+        this.userToQuest = userToQuest;
+    }
 
 
     public Society(String name) {
-        Name = name;
+        this.name = name;
     }
     public void addUser(User x)
     {
@@ -35,4 +47,5 @@ public class Society {
     {
         users.remove(x);
     }
+
 }

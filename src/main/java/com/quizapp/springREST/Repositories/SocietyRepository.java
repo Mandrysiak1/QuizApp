@@ -19,4 +19,5 @@ public interface SocietyRepository extends MongoRepository<Society,String> {
 
 
 
+
 }

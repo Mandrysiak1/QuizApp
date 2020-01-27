@@ -3,16 +3,16 @@ package com.quizapp.springREST.controllers;
 import com.quizapp.springREST.Model.Society;
 import com.quizapp.springREST.Model.User;
 import com.quizapp.springREST.Repositories.UserRepository;
+import com.quizapp.springREST.responses.SocietyResponse;
 import com.quizapp.springREST.services.SocietyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.management.openmbean.InvalidKeyException;
-import java.util.List;
+
+import static org.springframework.http.ResponseEntity.ok;
 
 @Controller
 @RequestMapping("/api/society")
@@ -31,19 +31,16 @@ public class SocietiesController {
         User user = userRepository.findByEmail(login);
         if (user == null) throw new InvalidKeyException("nie znaleziono użytkownika");
         newSociety.addUser(userRepository.findByEmail(login));
-        System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-        for (User x :
-                newSociety.getUsers()) {
-            System.out.println(x.getEmail());
-
-        }
-        societyManager.saveSociety(new Society(name));
+        societyManager.saveSociety(newSociety);
     }
 
     @GetMapping("/getUserSocieties")
-    public List<Society> getUserSocieties(@RequestParam String login)
+    public ResponseEntity getUserSocieties(@RequestParam String login)
     {
-        return societyManager.getAllSocietesRelatedToUser(userRepository.findByEmail(login));
+        SocietyResponse societies;
+        societies  =  societyManager.getAllSocietesRelatedToUser(userRepository.findByEmail(login));
+
+        return ok(societies);
     }
 
     @PostMapping("/leaveSociety")

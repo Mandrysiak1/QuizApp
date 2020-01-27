@@ -6,6 +6,7 @@ import org.springframework.data.mongodb.core.index.IndexDirection;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.Set;
 
@@ -15,6 +16,7 @@ public class User {
     @Id
     private String id;
     @Indexed(unique = true, direction = IndexDirection.DESCENDING, dropDups = true)
+    @Field(value = "email")
     private String email;
     private String password;
     private boolean enabled;
@@ -54,5 +56,19 @@ public class User {
     }
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+       if(obj instanceof User){
+           User toCompare = (User) obj;
+           return this.getId().equals(toCompare.getId());
+       }
+       return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return id.hashCode();
     }
 }
