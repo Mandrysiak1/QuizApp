@@ -12,7 +12,4 @@ public class SocietyRequest {
         this.name = name;
     }
 
-    public SocietyRequest(String name) {
-        this.name = name;
-    }
 }

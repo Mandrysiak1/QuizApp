@@ -34,7 +34,7 @@ public class SocietiesController {
         societyManager.saveSociety(newSociety);
     }
 
-        @PostMapping("/getUserSocieties")
+    @GetMapping("/getUserSocieties")
     public ResponseEntity getUserSocieties(@RequestBody SocietyRequest login)
     {
         SocietyResponse societies;
