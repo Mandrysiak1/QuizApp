@@ -35,10 +35,10 @@ public class SocietiesController {
     }
 
     @GetMapping("/getUserSocieties")
-    public ResponseEntity getUserSocieties(@RequestParam String login)
+    public ResponseEntity getUserSocieties(@RequestBody SocietyRequest login)
     {
         SocietyResponse societies;
-        societies  =  societyManager.getAllSocietesRelatedToUser(userRepository.findByEmail(login));
+        societies  =  societyManager.getAllSocietesRelatedToUser(userRepository.findByEmail(login.name));
 
         return ok(societies);
     }
