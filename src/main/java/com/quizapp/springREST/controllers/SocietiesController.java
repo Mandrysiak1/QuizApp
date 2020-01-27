@@ -38,7 +38,7 @@ public class SocietiesController {
     public ResponseEntity getUserSocieties(@RequestBody SocietyRequest login)
     {
         SocietyResponse societies;
-        societies  =  societyManager.getAllSocietesRelatedToUser(userRepository.findByEmail(login.name));
+        societies  =  societyManager.getAllSocietesRelatedToUser(userRepository.findByEmail(login.getName()));
 
         return ok(societies);
     }
