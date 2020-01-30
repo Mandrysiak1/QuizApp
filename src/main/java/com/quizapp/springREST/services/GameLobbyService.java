@@ -37,8 +37,9 @@ public class GameLobbyService {
 
         ArrayList<Lobby> x =  repositories.getLobbies().stream().filter(e -> e.getSocietyID().equals(socID)).collect(Collectors.toCollection(ArrayList::new));
 
+        System.out.println("X: " + x.size());
 
-        System.out.println("SOCID: " + socID);
+            System.out.println("SOCID: " + socID);
 
         ArrayList<LobbyBody> bodies = new ArrayList<>();
 

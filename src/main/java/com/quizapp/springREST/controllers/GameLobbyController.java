@@ -19,7 +19,7 @@ public class GameLobbyController {
     @Autowired
     private GameLobbyService gameController;
 
-    @GetMapping("/new")
+    @PostMapping("/new")    
     public ResponseEntity startNewLobby(@RequestBody newLobbyBody body )
     {
         return ok(new NewLobbyResponse(gameController.createLobby(body.getSocID()).getId()));
