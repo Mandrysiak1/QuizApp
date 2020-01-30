@@ -26,7 +26,7 @@ public class GameLobbyController {
     }
 
     //@RequestMapping(value = "/getAllLobbies",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    @GetMapping("/getAllLobbies")
+    @PostMapping("/getAllLobbies")
     public ResponseEntity getAllLobbies(@RequestBody getAllLobbiesBody body)
     {
         return ok(gameController.returnAllLobbies(body.getSocID()));
