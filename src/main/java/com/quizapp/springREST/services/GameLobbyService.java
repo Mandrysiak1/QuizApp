@@ -27,6 +27,8 @@ public class GameLobbyService {
 
         Lobby lobby = new Lobby(socID);
 
+        lobby.addPlayer(userRepository.findByEmail("aaa@email.com"));
+
         repositories.addLobby(lobby);
 
         return lobby;
