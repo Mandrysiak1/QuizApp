@@ -1,34 +1,41 @@
 package com.quizapp.springREST.controllers;
 
 
-import com.quizapp.springREST.Model.Lobby;
-import com.quizapp.springREST.services.GameLobbyService;
+import com.quizapp.springREST.RequestBodies.addPlayerBody;
+import com.quizapp.springREST.RequestBodies.getAllLobbiesBody;
+import com.quizapp.springREST.RequestBodies.newLobbyBody;
 import com.quizapp.springREST.responses.NewLobbyResponse;
-import org.springframework.http.MediaType;
+import com.quizapp.springREST.services.GameLobbyService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
 @RequestMapping("api/lobby")
 public class GameLobbyController {
 
-
-    private GameLobbyService gameController = new GameLobbyService();
+    @Autowired
+    private GameLobbyService gameController;
 
     @GetMapping("/new")
-    public NewLobbyResponse startNewLobby()
+    public ResponseEntity startNewLobby(@RequestBody newLobbyBody body )
     {
-        return new NewLobbyResponse(gameController.createLobby().getId());
+        return ok(new NewLobbyResponse(gameController.createLobby(body.getSocID()).getId()));
     }
 
-
-    @RequestMapping(value = "/getAllLobbies",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody ArrayList<Lobby> getAllLobbies()
+    //@RequestMapping(value = "/getAllLobbies",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping("/getAllLobbies")
+    public ResponseEntity getAllLobbies(@RequestBody getAllLobbiesBody body)
     {
+        return ok(gameController.returnAllLobbies(body.getSocID()));
+    }
 
-        return gameController.returnAllLobbies();
-
+    @GetMapping("/addPlayer")
+    public ResponseEntity addPlayer(@RequestBody addPlayerBody body){
+        gameController.addPlayer(body.getLobbyId(),body.getUsername());
+        return ok(true);
     }
 
 
