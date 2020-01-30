@@ -30,7 +30,7 @@ public class GameLobbyService {
         lobby.addPlayer(userRepository.findByEmail("aaa@email.com"));
         lobby.addPlayer(userRepository.findByEmail("aaa@email.com"));
         lobby.addPlayer(userRepository.findByEmail("aaa@email.com"));
-        lobby.addPlayer(userRepository.findByEmail("aaa@email.com"));   
+        lobby.addPlayer(userRepository.findByEmail("aaa@email.com"));
 
         repositories.addLobby(lobby);
 
