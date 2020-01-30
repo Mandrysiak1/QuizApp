@@ -38,15 +38,19 @@ public class GameLobbyService {
         ArrayList<Lobby> x =  repositories.getLobbies().stream().filter(e -> e.getSocietyID().equals(socID)).collect(Collectors.toCollection(ArrayList::new));
 
 
+        System.out.println("SOCID: " + socID);
+
         ArrayList<LobbyBody> bodies = new ArrayList<>();
 
         for (Lobby z : x) {
             bodies.add(new LobbyBody(z.getPlayers().stream().map(User::getEmail).collect(Collectors.toList()), z.getId()));
         }
 
+        if(bodies.size() == 0)
+            System.out.println("NO JEBŁO PANIE I TO GALANCIE");
         for (LobbyBody z :
                 bodies) {
-            System.out.println("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS: " + z.getPlayersNames().size());
+            System.out.println("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS: " + z.getPlayersNames().size()    );
         }
         return new AllLobbyResponse(bodies);
     }
