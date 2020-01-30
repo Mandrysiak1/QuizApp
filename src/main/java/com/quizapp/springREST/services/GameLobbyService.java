@@ -44,6 +44,10 @@ public class GameLobbyService {
             bodies.add(new LobbyBody(z.getPlayers().stream().map(User::getEmail).collect(Collectors.toList()), z.getId()));
         }
 
+        for (LobbyBody z :
+                bodies) {
+            System.out.println("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS: " + z.getPlayersNames().size());
+        }
         return new AllLobbyResponse(bodies);
     }
 
