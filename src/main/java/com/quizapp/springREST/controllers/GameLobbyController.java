@@ -22,10 +22,11 @@ public class GameLobbyController {
     @PostMapping("/new")
     public ResponseEntity startNewLobby(@RequestBody newLobbyBody body )
     {
-        return ok(new NewLobbyResponse(gameController.createLobby(body.getSocID()).getId()));
+        return ok(new NewLobbyResponse(gameController.createLobby(body.getSocID(),body.getPlayerName()).getId()));
+
+
     }
 
-    //@RequestMapping(value = "/getAllLobbies",method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @PostMapping("/getAllLobbies")
     public ResponseEntity getAllLobbies(@RequestBody getAllLobbiesBody body)
     {
@@ -37,6 +38,8 @@ public class GameLobbyController {
         gameController.addPlayer(body.getLobbyId(),body.getUsername());
         return ok(true);
     }
+
+
 
 
 

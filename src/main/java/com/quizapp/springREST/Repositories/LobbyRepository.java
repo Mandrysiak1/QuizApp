@@ -17,6 +17,9 @@ public class LobbyRepository {
         lobbies.add(lobby);
     }
 
+    public void removeLobby(String lobbyID){
+        lobbies.remove(GetLobbyByID(lobbyID));
+    }
     public ArrayList<Lobby> getAllLobbies()
     {
         return lobbies;
@@ -26,5 +29,7 @@ public class LobbyRepository {
 
         return lobbies.stream().filter(e->e.getId().equals(ID)).findFirst().orElse(null);
     }
+
+
 
 }

@@ -1,7 +1,6 @@
 package com.quizapp.springREST.services;
 
 import com.quizapp.springREST.Model.Lobby;
-import com.quizapp.springREST.Model.Player;
 import com.quizapp.springREST.Model.User;
 import com.quizapp.springREST.Repositories.LobbyRepository;
 import com.quizapp.springREST.Repositories.UserRepository;
@@ -22,16 +21,13 @@ public class GameLobbyService {
 
     private LobbyRepository repositories = new LobbyRepository();
 
-    public Lobby createLobby(String socID)
+    public Lobby createLobby(String socID,String playerName)
     {
 
         Lobby lobby = new Lobby(socID);
 
-        lobby.addPlayer(userRepository.findByEmail("aaa@email.com"));
-        lobby.addPlayer(userRepository.findByEmail("xxx@email.com"));
-        lobby.addPlayer(userRepository.findByEmail("aaa1111@email.com"));
-        lobby.addPlayer(userRepository.findByEmail("ab@email.com"));
-
+        lobby.addPlayer(userRepository.findByEmail(playerName));
+        lobby.setOwner(userRepository.findByEmail(playerName));
         repositories.addLobby(lobby);
 
         return lobby;
@@ -62,24 +58,42 @@ public class GameLobbyService {
     }
 
 
-    public void addPlayer(String lobbyID, String playerID){
+    public void addPlayer(String lobbyID, String playerName){
 
-        if(!repositories.GetLobbyByID(lobbyID).addPlayer(userRepository.findByEmail(playerID))){
-            throw new  IllegalArgumentException("Player in lobby already");
+
+        Lobby x = repositories.getLobbies().stream().
+                filter(e -> e.getPlayers().contains(userRepository.findByEmail(playerName) ) ).
+                findAny().orElse(null);
+
+        if( x != null)
+        {
+           x.removePlayer(userRepository.findByEmail(playerName));
+           repositories.GetLobbyByID(lobbyID).addPlayer(userRepository.findByEmail(playerName));
+        }else
+        {
+            repositories.GetLobbyByID(lobbyID).addPlayer(userRepository.findByEmail(playerName));
         }
-
     }
 
-    public void removePlayer(Player player, Lobby lobby)
+    public void removePlayer(User player, Lobby lobby)
     {
         if(!lobby.removePlayer(player)){
             throw new IllegalArgumentException("Player not in lobby");
+        }else if(player == lobby.getOwner())
+        {
+            removeLobby(lobby.getId());
+        }else{
+            lobby.removePlayer(player);
         }
     }
 
+    private void removeLobby(String id) {
+
+        repositories.removeLobby(id);
+    }
 
 
-  public Lobby getLobbyById(String ID){
+    public Lobby getLobbyById(String ID){
       return  repositories.GetLobbyByID(ID);
   }
 }

@@ -11,6 +11,15 @@ import java.util.HashSet;
 @Getter
 public class Lobby {
 
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
+
+    public User owner;
     @Getter
     private HashSet<User> players;
 
@@ -35,7 +44,7 @@ public class Lobby {
     }
 
 
-    public boolean removePlayer(Player player){
+    public boolean removePlayer(User player){
 
         return  players.remove(player);
     }
