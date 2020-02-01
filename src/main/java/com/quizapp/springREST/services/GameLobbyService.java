@@ -25,10 +25,11 @@ public class GameLobbyService {
     {
 
         Lobby lobby = new Lobby(socID);
-
-        addPlayer(lobby.getId(),userRepository.findByEmail(playerName).getEmail());
         lobby.setOwner(userRepository.findByEmail(playerName));
         repositories.addLobby(lobby);
+        addPlayer(lobby.getId(),userRepository.findByEmail(playerName).getEmail());
+
+
 
         return lobby;
     }
