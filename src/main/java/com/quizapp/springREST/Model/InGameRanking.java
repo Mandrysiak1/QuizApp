@@ -6,6 +6,5 @@ import java.util.HashMap;
 
 @Getter
 public class InGameRanking {
-
     HashMap<User,Integer> ranking;
 }

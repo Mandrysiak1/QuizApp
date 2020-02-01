@@ -16,6 +16,8 @@ import static org.springframework.http.ResponseEntity.ok;
 @RequestMapping("api/lobby")
 public class GameLobbyController {
 
+
+
     @Autowired
     private GameLobbyService gameController;
 
@@ -23,8 +25,6 @@ public class GameLobbyController {
     public ResponseEntity startNewLobby(@RequestBody newLobbyBody body )
     {
         return ok(new NewLobbyResponse(gameController.createLobby(body.getSocID(),body.getPlayerName()).getId()));
-
-
     }
 
     @PostMapping("/getAllLobbies")
