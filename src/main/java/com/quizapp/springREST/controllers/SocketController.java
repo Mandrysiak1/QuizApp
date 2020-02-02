@@ -20,7 +20,7 @@ class SocketController {
     EchoModel echoMessageMapping(@DestinationVariable String game_id, String message) {
        String x = message + game_id + "ASADADADADSADSAD===============================================================================================";
         System.out.println(x);
-        return new EchoModel(message.trim());
+        return new EchoModel(x.trim());
     }
 
     @RequestMapping(value = "/hello-convert-and-send", method = RequestMethod.POST)
