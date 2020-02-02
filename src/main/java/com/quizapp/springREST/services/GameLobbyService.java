@@ -67,8 +67,7 @@ public class GameLobbyService {
                 findAny().orElse(null);
 
         if( x != null)
-        {
-           x.removePlayer(userRepository.findByEmail(playerName));
+        { removePlayer(userRepository.findByEmail(playerName),x);
            repositories.GetLobbyByID(lobbyID).addPlayer(userRepository.findByEmail(playerName));
         }else
         {
@@ -85,6 +84,11 @@ public class GameLobbyService {
             removeLobby(lobby.getId());
         }else{
             lobby.removePlayer(player);
+        }
+
+        if(lobby.getPlayers().size() == 0)
+        {
+            repositories.removeLobby(lobby.getId());
         }
     }
 

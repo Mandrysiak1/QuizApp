@@ -5,7 +5,6 @@ import org.springframework.context.event.EventListener;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
-import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.messaging.simp.user.SimpUserRegistry;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.web.bind.annotation.RequestMapping;
