@@ -12,7 +12,7 @@ class SocketService {
 
     public void echoMessage(String message,String game_id) {
         System.out.println("++++++++++++++++++++++++++++++" + game_id);
-        simpTemplate.convertAndSend("/topic/games/"+game_id, new EchoModel(message));
+        simpTemplate.convertAndSend("/games/"+game_id, new EchoModel(message));
 
     }
 }
