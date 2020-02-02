@@ -10,9 +10,9 @@ class SocketService {
     @Autowired
     private SimpMessagingTemplate simpTemplate;
 
-    public void echoMessage(String message) {
-        System.out.println("aasd");
-        simpTemplate.convertAndSend("/topic/greetings", new EchoModel(message));
+    public void echoMessage(String message,String game_id) {
+        System.out.println("++++++++++++++++++++++++++++++" + game_id);
+        simpTemplate.convertAndSend("/topic/games/"+game_id, new EchoModel(message));
 
     }
 }
