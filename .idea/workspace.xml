@@ -6,6 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd84c4b7-4251-4569-b905-c39358495dcc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -101,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="43" column="93" selection-start-line="43" selection-start-column="93" selection-end-line="43" selection-end-column="93" />
+            <state relative-caret-position="195">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -365,7 +366,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580607066287" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580607245602" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Nowy folder/QuizApp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -514,7 +515,7 @@
       <workItem from="1580048677082" duration="10051000" />
       <workItem from="1580079864941" duration="24038000" />
       <workItem from="1580404856763" duration="18571000" />
-      <workItem from="1580584839811" duration="6048000" />
+      <workItem from="1580584839811" duration="6227000" />
     </task>
     <task id="LOCAL-00001" summary="qa">
       <created>1577642251573</created>
@@ -539,7 +540,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202792000" />
+    <option name="totallyTimeSpent" value="202971000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1238,8 +1239,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="43" column="93" selection-start-line="43" selection-start-column="93" selection-end-line="43" selection-end-column="93" />
+        <state relative-caret-position="195">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
