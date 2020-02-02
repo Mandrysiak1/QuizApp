@@ -5,6 +5,7 @@ import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.annotation.SubscribeMapping;
+import org.springframework.messaging.simp.user.SimpUserRegistry;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +17,7 @@ class SocketController {
     @Autowired
     SocketService socketService;
 
+    @Autowired private SimpUserRegistry simpUserRegistry;
 
     @MessageMapping("/games/{game_id}")
     @SubscribeMapping("/games/game_id")
@@ -24,7 +26,8 @@ class SocketController {
        String x = message + game_id + "ASADADADADSADSAD===============================================================================================";
         System.out.println(x);
         socketService.echoMessage(x.trim(),game_id);
-        return new EchoModel(x.trim());
+        System.out.println(simpUserRegistry.getUsers() + "SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
+                return new EchoModel(x.trim());
     }
 
     @RequestMapping(value = "/hello-convert-and-send", method = RequestMethod.POST)
