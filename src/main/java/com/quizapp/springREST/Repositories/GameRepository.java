@@ -1,6 +1,6 @@
 package com.quizapp.springREST.Repositories;
 
-import com.quizapp.springREST.Model.Game;
+import com.quizapp.springREST.model.objects.Game;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -18,6 +18,6 @@ public class GameRepository {
 
     public Game getActiveGameByID(String game_id)
     {
-        return activeGames.stream().filter(e->e.getId().equals(game_id)).findFirst().orElse(null);
+        return activeGames.stream().filter(e -> e.getGame_id().equals(game_id)).findFirst().orElse(null);
     }
 }

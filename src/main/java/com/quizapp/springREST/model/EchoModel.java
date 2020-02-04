@@ -1,8 +1,8 @@
-package com.quizapp.springREST.controllers;
+package com.quizapp.springREST.model;
 
-class EchoModel {
+public class EchoModel {
 
-    EchoModel(String echo) {
+    public EchoModel(String echo) {
         this.echo = echo;
     }
     String echo;

@@ -1,6 +1,6 @@
 package com.quizapp.springREST.Repositories;
 
-import com.quizapp.springREST.Model.User;
+import com.quizapp.springREST.model.objects.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

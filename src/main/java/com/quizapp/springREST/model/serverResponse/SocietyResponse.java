@@ -1,4 +1,4 @@
-package com.quizapp.springREST.responses;
+package com.quizapp.springREST.model.serverResponse;
 
 import lombok.Getter;
 
@@ -11,11 +11,11 @@ public class SocietyResponse {
     public SocietyResponse() {
     }
 
-    public SocietyResponse(List<SocEntity> societiesEntities) {
+    public SocietyResponse(List<SocietyEntity> societiesEntities) {
         this.societiesEntities = societiesEntities;
     }
 
-    private List<SocEntity> societiesEntities = new ArrayList<>();
+    private List<SocietyEntity> societiesEntities = new ArrayList<>();
 
 
 

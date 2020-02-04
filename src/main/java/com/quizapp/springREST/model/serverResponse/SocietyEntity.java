@@ -1,10 +1,10 @@
-package com.quizapp.springREST.responses;
+package com.quizapp.springREST.model.serverResponse;
 
-public class SocEntity {
+public class SocietyEntity {
     private String name;
     private String id;
 
-    public SocEntity(String name, String id) {
+    public SocietyEntity(String name, String id) {
         this.name = name;
         this.id = id;
     }

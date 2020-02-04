@@ -1,6 +1,6 @@
-package com.quizapp.springREST.RequestBodies;
+package com.quizapp.springREST.model.requestBody;
 
-public class newLobbyBody {
+public class NewLobbyRequestBody {
     private String socID;
     private String playerName;
 

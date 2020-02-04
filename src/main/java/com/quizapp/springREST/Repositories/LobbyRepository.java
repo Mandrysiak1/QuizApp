@@ -1,6 +1,6 @@
 package com.quizapp.springREST.Repositories;
 
-import com.quizapp.springREST.Model.Lobby;
+import com.quizapp.springREST.model.objects.Lobby;
 import lombok.Getter;
 import org.springframework.stereotype.Repository;
 
@@ -18,14 +18,14 @@ public class LobbyRepository {
     }
 
     public void removeLobby(String lobbyID){
-        lobbies.remove(GetLobbyByID(lobbyID));
+        lobbies.remove(getLobbyByID(lobbyID));
     }
     public ArrayList<Lobby> getAllLobbies()
     {
         return lobbies;
     }
 
-    public Lobby GetLobbyByID(String ID){
+    public Lobby getLobbyByID(String ID){
 
         return lobbies.stream().filter(e->e.getId().equals(ID)).findFirst().orElse(null);
     }

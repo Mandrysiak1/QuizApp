@@ -1,7 +1,7 @@
 package com.quizapp.springREST.services;
 
-import com.quizapp.springREST.Model.Role;
-import com.quizapp.springREST.Model.User;
+import com.quizapp.springREST.model.objects.Role;
+import com.quizapp.springREST.model.objects.User;
 import com.quizapp.springREST.Repositories.RoleRepository;
 import com.quizapp.springREST.Repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,11 +1,11 @@
 package com.quizapp.springREST.services;
 
-import com.quizapp.springREST.Model.Lobby;
-import com.quizapp.springREST.Model.User;
+import com.quizapp.springREST.model.objects.Lobby;
+import com.quizapp.springREST.model.objects.User;
 import com.quizapp.springREST.Repositories.LobbyRepository;
 import com.quizapp.springREST.Repositories.UserRepository;
-import com.quizapp.springREST.responses.AllLobbyResponse;
-import com.quizapp.springREST.responses.LobbyBody;
+import com.quizapp.springREST.model.serverResponse.AllLobbyResponse;
+import com.quizapp.springREST.model.serverResponse.LobbyBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +18,7 @@ public class GameLobbyService {
 
     @Autowired
     UserRepository userRepository;
+
 
     private LobbyRepository repositories = new LobbyRepository();
 
@@ -68,10 +69,10 @@ public class GameLobbyService {
 
         if( x != null)
         { removePlayer(userRepository.findByEmail(playerName),x);
-           repositories.GetLobbyByID(lobbyID).addPlayer(userRepository.findByEmail(playerName));
+           repositories.getLobbyByID(lobbyID).addPlayer(userRepository.findByEmail(playerName));
         }else
         {
-            repositories.GetLobbyByID(lobbyID).addPlayer(userRepository.findByEmail(playerName));
+            repositories.getLobbyByID(lobbyID).addPlayer(userRepository.findByEmail(playerName));
         }
     }
 
@@ -99,6 +100,12 @@ public class GameLobbyService {
 
 
     public Lobby getLobbyById(String ID){
-      return  repositories.GetLobbyByID(ID);
+      return  repositories.getLobbyByID(ID);
+  }
+
+
+  public void startGame()
+  {
+
   }
 }

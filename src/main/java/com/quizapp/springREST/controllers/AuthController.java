@@ -1,8 +1,8 @@
 package com.quizapp.springREST.controllers;
 
-import com.quizapp.springREST.Model.User;
+import com.quizapp.springREST.model.objects.User;
 import com.quizapp.springREST.Repositories.UserRepository;
-import com.quizapp.springREST.RequestBodies.AuthBody;
+import com.quizapp.springREST.model.requestBody.AuthBody;
 import com.quizapp.springREST.configs.JwtTokenProvider;
 import com.quizapp.springREST.services.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;

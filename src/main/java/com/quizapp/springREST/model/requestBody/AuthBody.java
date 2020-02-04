@@ -1,4 +1,4 @@
-package com.quizapp.springREST.RequestBodies;
+package com.quizapp.springREST.model.requestBody;
 
 public class AuthBody {
 

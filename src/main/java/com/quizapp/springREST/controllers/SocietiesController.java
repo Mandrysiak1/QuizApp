@@ -1,9 +1,10 @@
 package com.quizapp.springREST.controllers;
 
-import com.quizapp.springREST.Model.Society;
-import com.quizapp.springREST.Model.User;
+import com.quizapp.springREST.model.objects.Society;
+import com.quizapp.springREST.model.requestBody.SocietyRequestBody;
+import com.quizapp.springREST.model.objects.User;
 import com.quizapp.springREST.Repositories.UserRepository;
-import com.quizapp.springREST.responses.SocietyResponse;
+import com.quizapp.springREST.model.serverResponse.SocietyResponse;
 import com.quizapp.springREST.services.SocietyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +36,7 @@ public class SocietiesController {
     }
 
     @PostMapping("/getUserSocieties")
-    public ResponseEntity getUserSocieties(@RequestBody SocietyRequest login)
+    public ResponseEntity getUserSocieties(@RequestBody SocietyRequestBody login)
     {
         SocietyResponse societies;
         societies  =  societyManager.getAllSocietesRelatedToUser(userRepository.findByEmail(login.getName()));

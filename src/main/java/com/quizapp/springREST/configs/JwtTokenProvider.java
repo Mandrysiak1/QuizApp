@@ -1,6 +1,6 @@
 package com.quizapp.springREST.configs;
 
-import com.quizapp.springREST.Model.Role;
+import com.quizapp.springREST.model.objects.Role;
 import com.quizapp.springREST.services.CustomUserDetailsService;
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Autowired;

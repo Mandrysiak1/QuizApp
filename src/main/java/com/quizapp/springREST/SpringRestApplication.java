@@ -1,6 +1,6 @@
 package com.quizapp.springREST;
 
-import com.quizapp.springREST.Model.Role;
+import com.quizapp.springREST.model.objects.Role;
 import com.quizapp.springREST.Repositories.RoleRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

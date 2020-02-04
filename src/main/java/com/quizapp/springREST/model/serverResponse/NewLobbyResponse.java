@@ -1,4 +1,4 @@
-package com.quizapp.springREST.responses;
+package com.quizapp.springREST.model.serverResponse;
 
 import lombok.Getter;
 

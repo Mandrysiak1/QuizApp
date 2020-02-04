@@ -1,6 +1,6 @@
 package com.quizapp.springREST.Repositories;
 
-import com.quizapp.springREST.Model.Society;
+import com.quizapp.springREST.model.objects.Society;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
-package com.quizapp.springREST.controllers;
+package com.quizapp.springREST.model.requestBody;
 
-public class SocietyRequest {
+public class SocietyRequestBody {
 
     private String name;
 

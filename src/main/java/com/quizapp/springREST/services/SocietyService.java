@@ -1,12 +1,12 @@
 package com.quizapp.springREST.services;
 
 
-import com.quizapp.springREST.Model.Quest;
-import com.quizapp.springREST.Model.Society;
-import com.quizapp.springREST.Model.User;
+import com.quizapp.springREST.model.objects.Quest;
+import com.quizapp.springREST.model.objects.Society;
+import com.quizapp.springREST.model.objects.User;
 import com.quizapp.springREST.Repositories.SocietyRepository;
-import com.quizapp.springREST.responses.SocEntity;
-import com.quizapp.springREST.responses.SocietyResponse;
+import com.quizapp.springREST.model.serverResponse.SocietyEntity;
+import com.quizapp.springREST.model.serverResponse.SocietyResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -49,7 +49,7 @@ public class SocietyService {
         for (Society x: repository.findAll()
              ) {
             if(x.getUsers().contains(user)){
-                societies.getSocietiesEntities().add(new SocEntity(x.getName(),x.getId()));
+                societies.getSocietiesEntities().add(new SocietyEntity(x.getName(),x.getId()));
             }
 
 

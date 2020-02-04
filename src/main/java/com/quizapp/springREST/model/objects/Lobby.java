@@ -1,4 +1,4 @@
-package com.quizapp.springREST.Model;
+package com.quizapp.springREST.model.objects;
 
 
 import com.aventrix.jnanoid.jnanoid.NanoIdUtils;

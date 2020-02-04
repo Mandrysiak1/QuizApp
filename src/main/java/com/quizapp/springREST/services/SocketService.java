@@ -1,11 +1,12 @@
-package com.quizapp.springREST.controllers;
+package com.quizapp.springREST.services;
 
+import com.quizapp.springREST.model.EchoModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
-class SocketService {
+public class SocketService {
 
     @Autowired
     private SimpMessagingTemplate simpTemplate;
