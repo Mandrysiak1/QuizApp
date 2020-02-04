@@ -39,7 +39,7 @@ public class GameLobbyService {
     public AllLobbyResponse returnAllLobbies(String socID)
     {
 
-        ArrayList<Lobby> x =  repositories.getLobbies().stream().filter(e -> e.getSocietyID().equals(socID)).collect(Collectors.toCollection(ArrayList::new));
+        ArrayList<Lobby> x =  repositories.getAllLobbies().stream().filter(e -> e.getSocietyID().equals(socID)).collect(Collectors.toCollection(ArrayList::new));
 
         System.out.println("X: " + x.size());
 
@@ -55,7 +55,7 @@ public class GameLobbyService {
             System.out.println("NO JEBŁO PANIE I TO GALANCIE");
         for (LobbyBody z :
                 bodies) {
-            System.out.println("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS: " + z.getPlayersNames().size()    );
+            System.out.println("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS: " + z.getPlayersNames().size() + z.getID() +" <- ID"    );
         }
         return new AllLobbyResponse(bodies);
     }
