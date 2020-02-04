@@ -37,7 +37,7 @@ class SocketController {
 
         gameService.startNewGame(body.getGameID());
     }
-    @PostMapping
+    @PostMapping("/games/{game_id}/post_anserws")
     void postAnserws(@RequestBody PlayerAnswers body )
     {
         gameService.postAnswers(body);
