@@ -79,6 +79,9 @@ public class Game {
 
     public GameState getGameState() {
         System.out.println("into get gameState");
+        if(roundNumber == null)
+            System.out.println("1");else if(currentQuestion == null) System.out.println("2"); else if(ranking == null )
+            System.out.println("3");else System.out.println("no huj ci w dziub");
         return new GameState(roundNumber,currentQuestion,ranking);
     }
 
