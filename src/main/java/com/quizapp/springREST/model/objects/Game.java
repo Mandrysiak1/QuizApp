@@ -17,6 +17,7 @@ public class Game {
     GameService gameService;
 
     private String game_id;
+    private GameState gs;
     private Lobby lobby;
     private InGameRanking ranking;
     private Integer roundNumber = 0;
@@ -84,20 +85,12 @@ public class Game {
     }
 
 
-    public GameState getGameState() {
+    public void getGameState() {
         System.out.println("into get gameState");
         if(roundNumber == null)
             System.out.println("1");else if(currentQuestion == null) System.out.println("2"); else if(ranking == null )
             System.out.println("3");else System.out.println("no huj ci w dziub");
-            GameState x = new GameState(roundNumber,currentQuestion,ranking);
-
-            if(x ==null)
-                System.out.println("kill me pls");
-            else
-            {
-                System.out.println("to tez nie to");
-            }
-        return x;
+            gs = new GameState(roundNumber,currentQuestion,ranking);
     }
 
     public boolean addAnswers(PlayerAnswers x){
@@ -146,7 +139,7 @@ public class Game {
 
     }
 
-    private GameState startNextRound() {
+    private void startNextRound() {
         System.out.println("no jestem se tuitaj siem amordasiod ofasd kutas");
         roundNumber ++;
         System.out.println(questions.size() + " <-questions size");
@@ -154,7 +147,7 @@ public class Game {
         currentQuestion = questions.get((currentQuestionCounter++)+1);
 
         System.out.println();
-        gameService.sendGameState(getGameState(),game_id);
-        return getGameState();
+        gameService.sendGameState(gs,game_id);
+        //return getGameState();
     }
 }
