@@ -20,7 +20,8 @@ public class GameLobbyService {
     UserRepository userRepository;
 
 
-    private LobbyRepository repositories = new LobbyRepository();
+    @Autowired
+    private LobbyRepository repositories;
 
     public Lobby createLobby(String socID,String playerName)
     {
