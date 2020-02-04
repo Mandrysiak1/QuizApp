@@ -54,7 +54,10 @@ public class Game {
             @Override
             public void run() {
                 System.out.println("Sheduler worked xd");
-                proceedAnserws();
+                if(counter != 0){
+
+                    proceedAnserws();
+                }
                 startNextRound();
                 counter++;
                 if (counter >= 20){
