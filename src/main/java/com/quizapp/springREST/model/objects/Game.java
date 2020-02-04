@@ -4,6 +4,7 @@ import com.quizapp.springREST.model.PlayerAnswers;
 import com.quizapp.springREST.services.GameService;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 
 import java.util.*;
 
@@ -15,6 +16,9 @@ public class Game {
 
     @Autowired
     GameService gameService;
+
+    @Autowired
+    private SimpMessagingTemplate simpTemplate;
 
     private String game_id;
     private GameState gs;
@@ -144,6 +148,7 @@ public class Game {
         currentQuestion = questions.get((currentQuestionCounter++)+1);
 
         System.out.println();
+        simpTemplate.convertAndSend("/topic/games/"+game_id, gs);
         gameService.sendGameState(gs,game_id);
         //return getGameState();
     }
