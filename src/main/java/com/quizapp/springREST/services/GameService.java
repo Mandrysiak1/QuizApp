@@ -38,7 +38,7 @@ public class GameService {
         Lobby lobby  = lobbyRepository.getLobbyByID(lobbyID);
 
         if(lobby == null) System.out.println("FUCK ME in ass pls");
-        Game game = new Game(lobby,randomQuestion(lobby. getSocietyID()));
+        Game game = new Game(lobby,randomQuestion(lobby.getSocietyID()));
         gameRepository.AddNewGame(game);
     }
 

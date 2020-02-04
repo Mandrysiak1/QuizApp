@@ -4,6 +4,12 @@ import java.util.HashMap;
 
 public class Question {
 
+    public Question(String text, HashMap<Character, String> answers, Character properAnswer) {
+        this.text = text;
+        this.answers = answers;
+        this.properAnswer = properAnswer;
+    }
+
     String text;
     HashMap<Character,String> answers = new HashMap<>();
     Character properAnswer;

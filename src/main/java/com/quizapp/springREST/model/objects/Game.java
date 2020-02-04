@@ -118,7 +118,7 @@ public class Game {
 
     private GameState startNextRound() {
         roundNumber ++;
-        currentQuestion = questions.get(currentQuestionCounter++);
+        currentQuestion = questions.get((currentQuestionCounter++)+1);
 
         gameService.sendGameState(getGameState(),lobby.getId());
         return getGameState();
