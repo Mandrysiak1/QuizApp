@@ -16,9 +16,9 @@ public class QuestionEntity {
     @Field("question")
     private Question question;
 
-    public QuestionEntity(String socID, Question questions) {
+    public QuestionEntity(String socID, Question question) {
         this.socID = socID;
-        this.question = questions;
+        this.question = question;
     }
 
     public String getId() {
