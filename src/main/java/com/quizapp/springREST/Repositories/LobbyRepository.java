@@ -28,7 +28,7 @@ public class LobbyRepository {
     public Lobby getLobbyByID(String ID){
 
         lobbies.forEach(e -> System.out.println(e.getId()));
-        System.out.println(ID + "fnind");
+        System.out.println(lobbies.size() + "as");
         for (Lobby x : lobbies)
         {
             System.out.println(x.getId() + "KOZA " + ID);
