@@ -87,10 +87,7 @@ public class Game {
 
     public void getGameState() {
         System.out.println("into get gameState");
-        if(roundNumber == null)
-            System.out.println("1");else if(currentQuestion == null) System.out.println("2"); else if(ranking == null )
-            System.out.println("3");else System.out.println("no huj ci w dziub");
-            gs = new GameState(roundNumber,currentQuestion,ranking);
+        gs = new GameState(roundNumber,currentQuestion,ranking);
     }
 
     public boolean addAnswers(PlayerAnswers x){
