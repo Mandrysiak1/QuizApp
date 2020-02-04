@@ -20,7 +20,7 @@ public class Game {
     private GameState gs;
     private Lobby lobby;
     private InGameRanking ranking;
-    private Integer roundNumber = 0;
+    private int roundNumber = 0;
     private ArrayList<Question> questions;
     private Question currentQuestion;
     private int currentQuestionCounter = -1;
