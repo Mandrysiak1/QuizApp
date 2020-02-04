@@ -39,6 +39,8 @@ public class Game {
        // currentQuestion = questions.get(0);
 
 
+        System.out.println("Start new Game");
+
         Timer timer = new Timer();
 
         int begin = 0;
@@ -47,9 +49,10 @@ public class Game {
 
         timer.schedule(new TimerTask() {
 
-            int counter = 0; 
+            int counter = 0;
             @Override
             public void run() {
+                System.out.println("Sheduler worked xd");
                 proceedAnserws();
                 startNextRound();
                 counter++;
@@ -115,6 +118,7 @@ public class Game {
     private GameState startNextRound() {
         roundNumber ++;
         currentQuestion = questions.get(currentQuestionCounter++);
+
         gameService.sendGameState(getGameState(),lobby.getId());
         return getGameState();
     }
