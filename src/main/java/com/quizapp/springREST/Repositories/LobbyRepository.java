@@ -36,6 +36,8 @@ public class LobbyRepository {
                 return  x;
             }
         }
+
+        return  null;
         //return lobbies.stream().filter(lobby -> ID.equals(lobby.getId())).findFirst().orElse(null);
     }
 
