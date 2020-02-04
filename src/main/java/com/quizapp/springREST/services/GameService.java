@@ -36,7 +36,7 @@ public class GameService {
 
         System.out.println("START NEW GAME SERVICE");
         Lobby lobby  = lobbyRepository.getLobbyByID(lobbyID);
-        lobby.getOwner().getId() ;
+        
         Game game = new Game(lobby,randomQuestion(lobby. getSocietyID()));
         gameRepository.AddNewGame(game);
     }
