@@ -33,6 +33,7 @@ public class Game {
         this.lobby = lobby;
         this.game_id = lobby.getId();
         this.questions = questions;
+        this.ranking = new InGameRanking();
         startGame();
     }
 
@@ -70,6 +71,7 @@ public class Game {
 
 
     public GameState getGameState() {
+        System.out.println("into get gameState");
         return new GameState(roundNumber,currentQuestion,ranking);
     }
 
@@ -120,7 +122,9 @@ public class Game {
     }
 
     private GameState startNextRound() {
+        System.out.println("no jestem se tuitaj siem amordasiod ofasd kutas");
         roundNumber ++;
+        System.out.println(questions.get((currentQuestionCounter++)+1).text + "<- thats a question text");
         currentQuestion = questions.get((currentQuestionCounter++)+1);
 
         gameService.sendGameState(getGameState(),lobby.getId());
