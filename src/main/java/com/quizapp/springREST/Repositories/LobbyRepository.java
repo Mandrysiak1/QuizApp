@@ -28,7 +28,15 @@ public class LobbyRepository {
     public Lobby getLobbyByID(String ID){
 
         System.out.println(ID + "fnind");
-        return lobbies.stream().filter(lobby -> ID.equals(lobby.getId())).findFirst().orElse(null);
+        for (Lobby x : lobbies)
+        {
+            if(x.getId().equals(ID))
+            {
+                System.out.println(x.getId() + "KOZA " + ID);
+                return  x;
+            }
+        }
+        //return lobbies.stream().filter(lobby -> ID.equals(lobby.getId())).findFirst().orElse(null);
     }
 
 
