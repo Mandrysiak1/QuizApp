@@ -2,10 +2,9 @@ package com.quizapp.springREST.model;
 
 public class newGameBody {
     private String userID;
+    private String gameID;
 
-    public String getUserID() {
-        return userID;
-    }
+    public String getUserID() { return userID; }
 
     public void setUserID(String userID) {
         this.userID = userID;
@@ -19,5 +18,5 @@ public class newGameBody {
         this.gameID = gameID;
     }
 
-    private String gameID;
+
 }
