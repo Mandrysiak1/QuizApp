@@ -78,7 +78,17 @@ public class Game {
 
                     proceedAnserws();
                 }
-                startNextRound();
+
+                System.out.println("no jestem se tuitaj siem amordasiod ofasd kutas");
+                roundNumber ++;
+                System.out.println(questions.size() + " <-questions size");
+                System.out.println(questions.get((currentQuestionCounter++)+1).text + "<- thats a question text");
+                currentQuestion = questions.get((currentQuestionCounter++)+1);
+
+                System.out.println();
+                simpTemplate.convertAndSend("/topic/games/"+game_id, gs);
+                gameService.sendGameState(gs,game_id);
+                //startNextRound();
                 counter++;
                 if (counter >= 20){
                     timer.cancel();
@@ -141,15 +151,7 @@ public class Game {
     }
 
     private synchronized  void startNextRound() {
-        System.out.println("no jestem se tuitaj siem amordasiod ofasd kutas");
-        roundNumber ++;
-        System.out.println(questions.size() + " <-questions size");
-        System.out.println(questions.get((currentQuestionCounter++)+1).text + "<- thats a question text");
-        currentQuestion = questions.get((currentQuestionCounter++)+1);
 
-        System.out.println();
-        simpTemplate.convertAndSend("/topic/games/"+game_id, gs);
-        gameService.sendGameState(gs,game_id);
         //return getGameState();
     }
 }
