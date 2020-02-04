@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd84c4b7-4251-4569-b905-c39358495dcc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -103,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+            <state relative-caret-position="161">
+              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/GameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
+            <state relative-caret-position="17">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding>
                 <element signature="e#104#105#0" expanded="true" />
                 <element signature="e#138#139#0" expanded="true" />
@@ -290,9 +290,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/SocketService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/EchoModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/PlayerAnswers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Question.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/GameState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java" />
       </list>
     </option>
   </component>
@@ -406,7 +406,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580778420923" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580779034660" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Nowy folder/QuizApp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -563,7 +563,7 @@
       <workItem from="1580048677082" duration="10051000" />
       <workItem from="1580079864941" duration="24038000" />
       <workItem from="1580404856763" duration="18571000" />
-      <workItem from="1580584839811" duration="25749000" />
+      <workItem from="1580584839811" duration="26362000" />
     </task>
     <task id="LOCAL-00001" summary="qa">
       <created>1577642251573</created>
@@ -588,7 +588,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="222493000" />
+    <option name="totallyTimeSpent" value="223106000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -603,7 +603,7 @@
     <frame x="265" y="59" width="1479" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30021143" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30021143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -613,7 +613,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.89499646" visible="true" weight="0.37199125" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.89499646" visible="true" weight="0.37199125" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.7990405" weight="0.3954496" />
@@ -1269,20 +1269,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/GameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
+        <state relative-caret-position="17">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding>
             <element signature="e#104#105#0" expanded="true" />
             <element signature="e#138#139#0" expanded="true" />
@@ -1296,6 +1286,16 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#517#518#0" expanded="true" />
             <element signature="e#555#556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

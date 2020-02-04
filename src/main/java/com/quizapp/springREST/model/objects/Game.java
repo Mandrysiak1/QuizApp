@@ -47,7 +47,7 @@ public class Game {
 
         timer.schedule(new TimerTask() {
 
-            int counter = 0;
+            int counter = 0; 
             @Override
             public void run() {
                 proceedAnserws();
