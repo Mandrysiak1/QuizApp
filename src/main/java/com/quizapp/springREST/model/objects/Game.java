@@ -140,7 +140,7 @@ public class Game {
 
     }
 
-    private void startNextRound() {
+    private synchronized  void startNextRound() {
         System.out.println("no jestem se tuitaj siem amordasiod ofasd kutas");
         roundNumber ++;
         System.out.println(questions.size() + " <-questions size");
