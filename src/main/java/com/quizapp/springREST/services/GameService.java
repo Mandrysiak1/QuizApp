@@ -34,15 +34,17 @@ public class GameService {
     public void startNewGame(String lobbyID)
     {
 
+        System.out.println("START NEW GAME SERVICE");
         Lobby lobby  = lobbyRepository.getLobbyByID(lobbyID);
         lobby.getOwner().getId() ;
-        Game game = new Game(lobby,randomQuestion(lobby.getSocietyID()));
+        Game game = new Game(lobby,randomQuestion(lobby. getSocietyID()));
         gameRepository.AddNewGame(game);
     }
 
     public ArrayList<Question> randomQuestion(String id) {
 
 
+        System.out.println("random questions");
         ArrayList<Question>  q =  questionRepository.findAllBySocID(id).stream().map(QuestionEntity::getQuestion).collect(Collectors.toCollection(ArrayList::new));
 
         return getRandomElement(q,questionCount);

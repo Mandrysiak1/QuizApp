@@ -28,7 +28,8 @@ public class Game {
 
     HashSet<PlayerAnswers> answers;
     public Game(Lobby lobby, ArrayList<Question> questions) {
-
+        System.out.println("START NEW GAME CSTR)"
+        );
         this.lobby = lobby;
         this.game_id = lobby.getId();
         this.questions = questions;

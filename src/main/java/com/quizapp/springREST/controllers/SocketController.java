@@ -34,7 +34,7 @@ class SocketController {
 
     @PostMapping("/games/{game_id}/new_game")
     void startNewGame(@RequestBody newGameBody body) {
-
+        System.out.println("START NEW GAME CONTROLLER");
         gameService.startNewGame(body.getGameID());
     }
     @PostMapping("/games/{game_id}/post_anserws")
