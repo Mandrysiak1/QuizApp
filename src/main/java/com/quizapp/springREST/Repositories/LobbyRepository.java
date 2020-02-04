@@ -27,12 +27,14 @@ public class LobbyRepository {
 
     public Lobby getLobbyByID(String ID){
 
+        lobbies.forEach(System.out::println);
         System.out.println(ID + "fnind");
         for (Lobby x : lobbies)
         {
+            System.out.println(x.getId() + "KOZA " + ID);
             if(x.getId().equals(ID))
             {
-                System.out.println(x.getId() + "KOZA " + ID);
+
                 return  x;
             }
         }
