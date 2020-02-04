@@ -33,6 +33,13 @@ public class Game {
         this.lobby = lobby;
         this.game_id = lobby.getId();
         this.questions = questions;
+        if(this.questionHashset == null)
+            System.out.println("pls kill me");
+            else System.out.println(this.questions.size() + " <- size of question in cstr");
+
+
+        System.out.println(questions.size() + " <- size of question passed in cstr");
+
         this.ranking = new InGameRanking();
         startGame();
     }
