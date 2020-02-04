@@ -2,6 +2,7 @@ package com.quizapp.springREST.model.objects;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 
 @Document(collection = "questions")
@@ -12,6 +13,7 @@ public class QuestionEntity {
 
     private String socID;
 
+    @Field("question")
     private Question question;
 
     public QuestionEntity(String socID, Question questions) {
