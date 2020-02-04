@@ -6,11 +6,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/QuestionEntity.java" line="16" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd84c4b7-4251-4569-b905-c39358495dcc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/GameService.java" afterDir="false" />
-    </list>
+    <list default="true" id="dd84c4b7-4251-4569-b905-c39358495dcc" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -96,10 +92,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+            <state relative-caret-position="271">
+              <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/newGameBody.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+              <folding>
+                <element signature="e#124#125#0" expanded="true" />
+                <element signature="e#153#154#0" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
+                <element signature="e#233#234#0" expanded="true" />
+                <element signature="e#266#267#0" expanded="true" />
+                <element signature="e#295#296#0" expanded="true" />
+                <element signature="e#339#340#0" expanded="true" />
+                <element signature="e#375#376#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+            <state relative-caret-position="-80">
+              <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -184,40 +199,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/GameService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+            <state relative-caret-position="277">
+              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/PlayerAnswers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#331#332#0" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
-                <element signature="e#404#405#0" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#473#474#0" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
-                <element signature="e#546#547#0" expanded="true" />
-                <element signature="e#582#583#0" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
-                <element signature="e#647#648#0" expanded="true" />
-                <element signature="e#694#695#0" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#828#829#0" expanded="true" />
-                <element signature="e#908#909#0" expanded="true" />
-                <element signature="e#957#958#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -408,7 +396,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580782639696" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580784545886" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Nowy folder/QuizApp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -565,7 +553,7 @@
       <workItem from="1580048677082" duration="10051000" />
       <workItem from="1580079864941" duration="24038000" />
       <workItem from="1580404856763" duration="18571000" />
-      <workItem from="1580584839811" duration="29090000" />
+      <workItem from="1580584839811" duration="30160000" />
     </task>
     <task id="LOCAL-00001" summary="qa">
       <created>1577642251573</created>
@@ -590,7 +578,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225834000" />
+    <option name="totallyTimeSpent" value="226904000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -971,23 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/newGameBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#124#125#0" expanded="true" />
-            <element signature="e#153#154#0" expanded="true" />
-            <element signature="e#197#198#0" expanded="true" />
-            <element signature="e#233#234#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Repositories/LobbyRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1272,10 +1243,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/GameService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+        <state relative-caret-position="277">
+          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1284,20 +1255,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        <state relative-caret-position="-80">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/GameService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="46" column="47" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+        <state relative-caret-position="271">
+          <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/newGameBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
           </folding>
         </state>
       </provider>
