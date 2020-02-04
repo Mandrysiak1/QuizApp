@@ -1,6 +1,6 @@
 package com.quizapp.springREST.model;
 
-public class newGameBody {
+public class NewGameBody {
     private String userID;
     private String gameID;
 

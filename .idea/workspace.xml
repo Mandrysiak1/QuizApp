@@ -7,7 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd84c4b7-4251-4569-b905-c39358495dcc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/newGameBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/NewGameBody.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -98,8 +100,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+            <state relative-caret-position="356">
+              <caret line="37" column="81" selection-start-line="37" selection-start-column="81" selection-end-line="37" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,10 +110,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/newGameBody.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/NewGameBody.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            <state relative-caret-position="68">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
               <folding>
                 <element signature="e#197#198#0" expanded="true" />
                 <element signature="e#233#234#0" expanded="true" />
@@ -227,7 +229,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/GameController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/configs/WebSocketConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/Message.java" />
@@ -277,14 +278,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/GameService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/newGameBody.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/NewGameBody.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="265" />
-    <option name="y" value="59" />
-    <option name="width" value="1479" />
+    <option name="x" value="-7" />
+    <option name="width" value="1585" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -401,7 +402,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580785208142" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580785794027" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Nowy folder/QuizApp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -558,7 +559,7 @@
       <workItem from="1580048677082" duration="10051000" />
       <workItem from="1580079864941" duration="24038000" />
       <workItem from="1580404856763" duration="18571000" />
-      <workItem from="1580584839811" duration="30925000" />
+      <workItem from="1580584839811" duration="31511000" />
     </task>
     <task id="LOCAL-00001" summary="qa">
       <created>1577642251573</created>
@@ -583,7 +584,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227669000" />
+    <option name="totallyTimeSpent" value="228255000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -595,10 +596,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="265" y="59" width="1479" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1585" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30021143" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27934426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -608,7 +609,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.89499646" visible="true" weight="0.37199125" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.895082" visible="true" weight="0.37199125" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.7990405" weight="0.3954496" />
@@ -617,7 +618,7 @@
       <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49733475" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7457356" weight="0.23726977" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.10500352" side_tool="true" visible="true" weight="0.37199125" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.10491803" side_tool="true" visible="true" weight="0.37199125" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4914712" weight="0.32936078" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" sideWeight="0.49733475" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
@@ -1251,6 +1252,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/GameService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/requestBody/AuthBody.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1258,10 +1269,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/newGameBody.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/NewGameBody.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding>
             <element signature="e#197#198#0" expanded="true" />
             <element signature="e#233#234#0" expanded="true" />
@@ -1273,20 +1284,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/GameService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
+        <state relative-caret-position="356">
+          <caret line="37" column="81" selection-start-line="37" selection-start-column="81" selection-end-line="37" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
