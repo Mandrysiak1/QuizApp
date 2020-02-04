@@ -38,6 +38,7 @@ public class GameService {
         Lobby lobby  = lobbyRepository.getLobbyByID(lobbyID);
 
         if(lobby == null) System.out.println("FUCK ME in ass pls");
+        System.out.println(randomQuestion(lobby.getSocietyID()).size() + "<- random questions coutn in startNewGame");
         Game game = new Game(lobby,randomQuestion(lobby.getSocietyID()));
         gameRepository.AddNewGame(game);
     }
@@ -48,6 +49,7 @@ public class GameService {
         System.out.println("random questions");
         ArrayList<Question>  q =  questionRepository.findAllBySocID(id).stream().map(QuestionEntity::getQuestion).collect(Collectors.toCollection(ArrayList::new));
 
+        System.out.println(q.size() + " <- question array size in randomQuestions");
 
         return getRandomElement(q,questionCount);
 

@@ -124,6 +124,7 @@ public class Game {
     private GameState startNextRound() {
         System.out.println("no jestem se tuitaj siem amordasiod ofasd kutas");
         roundNumber ++;
+        System.out.println(questions.size() + " <-questions size");
         System.out.println(questions.get((currentQuestionCounter++)+1).text + "<- thats a question text");
         currentQuestion = questions.get((currentQuestionCounter++)+1);
 
