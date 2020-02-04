@@ -33,5 +33,6 @@ public class GameState {
         this.roundNumber = roundNumber;
         this.question = question;
         this.ranking = ranking;
+        System.out.println("prosze ");
     }
 }

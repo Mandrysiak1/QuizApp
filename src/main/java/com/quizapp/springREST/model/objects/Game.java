@@ -39,6 +39,13 @@ public class Game {
 
 
         System.out.println(questions.size() + " <- size of question passed in cstr");
+        if(lobby ==null)
+        {
+            System.out.println("to to");
+
+        }else {
+            System.out.println("to nie to: " + lobby.getId());
+        }
 
         this.ranking = new InGameRanking();
         startGame();
