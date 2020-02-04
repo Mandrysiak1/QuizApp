@@ -89,7 +89,15 @@ public class Game {
         if(roundNumber == null)
             System.out.println("1");else if(currentQuestion == null) System.out.println("2"); else if(ranking == null )
             System.out.println("3");else System.out.println("no huj ci w dziub");
-        return new GameState(roundNumber,currentQuestion,ranking);
+            GameState x = new GameState(roundNumber,currentQuestion,ranking);
+
+            if(x ==null)
+                System.out.println("kill me pls");
+            else
+            {
+                System.out.println("to tez nie to");
+            }
+        return x;
     }
 
     public boolean addAnswers(PlayerAnswers x){
@@ -145,7 +153,8 @@ public class Game {
         System.out.println(questions.get((currentQuestionCounter++)+1).text + "<- thats a question text");
         currentQuestion = questions.get((currentQuestionCounter++)+1);
 
-        gameService.sendGameState(getGameState(),lobby.getId());
+        System.out.println();
+        gameService.sendGameState(getGameState(),game_id);
         return getGameState();
     }
 }
