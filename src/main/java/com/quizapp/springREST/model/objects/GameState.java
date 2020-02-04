@@ -29,4 +29,9 @@ public class GameState {
     private Question question;
     private InGameRanking ranking;
 
+    public GameState(int roundNumber, Question question, InGameRanking ranking) {
+        this.roundNumber = roundNumber;
+        this.question = question;
+        this.ranking = ranking;
+    }
 }

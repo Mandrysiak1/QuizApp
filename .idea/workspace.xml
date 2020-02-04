@@ -7,53 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd84c4b7-4251-4569-b905-c39358495dcc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Repositories/QuestionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/QuestionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/newGameBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/QuestionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/QuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Model/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Model/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Model/InGameRanking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/InGameRanking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Model/Lobby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Lobby.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Model/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Model/PlayerAnswers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/PlayerAnswers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Model/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Quest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Model/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Model/Society.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Society.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Repositories/GameRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Repositories/GameRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Repositories/LobbyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Repositories/LobbyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Repositories/QuestionsRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Repositories/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Repositories/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Repositories/SocietyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Repositories/SocietyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/Repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/RequestBodies/AuthBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/requestBody/AuthBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/RequestBodies/addPlayerBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/requestBody/AddPlayerRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/RequestBodies/getAllLobbiesBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/requestBody/GetAllLobbyRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/RequestBodies/newLobbyBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/requestBody/NewLobbyRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/SpringRestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/SpringRestApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/configs/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/configs/JwtTokenProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/EchoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/EchoModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/GameController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/GameLobbyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/GameLobbyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocietiesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocietiesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocietyRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/requestBody/SocietyRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/SocketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/responses/AllLobbyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/serverResponse/AllLobbyResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/responses/LobbyBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/serverResponse/LobbyBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/responses/NewLobbyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/serverResponse/NewLobbyResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/responses/SocEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/serverResponse/SocietyEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/responses/SocietyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/serverResponse/SocietyResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/GameLobbyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/GameLobbyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/SocietyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/services/SocietyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/GameState.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -152,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1419">
-              <caret line="119" column="5" lean-forward="true" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
+            <state relative-caret-position="416">
+              <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/GameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+            <state relative-caret-position="407">
+              <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
               <folding>
                 <element signature="e#104#105#0" expanded="true" />
                 <element signature="e#138#139#0" expanded="true" />
@@ -193,7 +147,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/InGameRanking.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -337,8 +291,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/EchoModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/PlayerAnswers.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/GameState.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Question.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/GameState.java" />
       </list>
     </option>
   </component>
@@ -452,7 +406,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580778104805" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1580778420923" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Nowy folder/QuizApp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -609,7 +563,7 @@
       <workItem from="1580048677082" duration="10051000" />
       <workItem from="1580079864941" duration="24038000" />
       <workItem from="1580404856763" duration="18571000" />
-      <workItem from="1580584839811" duration="25433000" />
+      <workItem from="1580584839811" duration="25749000" />
     </task>
     <task id="LOCAL-00001" summary="qa">
       <created>1577642251573</created>
@@ -634,7 +588,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="222177000" />
+    <option name="totallyTimeSpent" value="222493000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1242,16 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1419">
-          <caret line="119" column="5" lean-forward="true" selection-start-line="119" selection-start-column="5" selection-end-line="119" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/controllers/SocketController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -1315,10 +1259,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/InGameRanking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/GameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        <state relative-caret-position="407">
+          <caret line="31" column="81" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
           <folding>
             <element signature="e#104#105#0" expanded="true" />
             <element signature="e#138#139#0" expanded="true" />
@@ -1332,16 +1296,6 @@
             <element signature="e#464#465#0" expanded="true" />
             <element signature="e#517#518#0" expanded="true" />
             <element signature="e#555#556#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/quizapp/springREST/model/objects/InGameRanking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
