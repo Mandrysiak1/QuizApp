@@ -86,7 +86,10 @@ public class Game {
                 currentQuestion = questions.get((currentQuestionCounter++)+1);
 
                 System.out.println();
-                simpTemplate.convertAndSend("/topic/games/"+game_id, gs);
+                if(simpTemplate == null) System.out.println("1") ;else if( game_id == null) System.out.println("2"); else  if(gs ==null)
+                    System.out.println("3"); else
+                    System.out.println("ty no nie wiem jak tam twoja szmaciura");;
+                simpTemplate.convertAndSend("/topic/games/" + game_id, gs);
                 gameService.sendGameState(gs,game_id);
                 //startNextRound();
                 counter++;
