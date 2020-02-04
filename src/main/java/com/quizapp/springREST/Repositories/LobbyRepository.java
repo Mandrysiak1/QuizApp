@@ -27,7 +27,7 @@ public class LobbyRepository {
 
     public Lobby getLobbyByID(String ID){
 
-        return lobbies.stream().filter(e->e.getId().equals(ID)).findFirst().orElse(null);
+        return lobbies.stream().filter(lobby -> ID.equals(lobby.getId())).findFirst().orElse(null);
     }
 
 
