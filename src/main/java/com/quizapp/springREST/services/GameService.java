@@ -48,6 +48,7 @@ public class GameService {
         System.out.println("random questions");
         ArrayList<Question>  q =  questionRepository.findAllBySocID(id).stream().map(QuestionEntity::getQuestion).collect(Collectors.toCollection(ArrayList::new));
 
+
         return getRandomElement(q,questionCount);
 
     }

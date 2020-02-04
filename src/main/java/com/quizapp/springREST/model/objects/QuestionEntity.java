@@ -1,7 +1,6 @@
 package com.quizapp.springREST.model.objects;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
@@ -13,7 +12,6 @@ public class QuestionEntity {
 
     private String socID;
 
-    @DBRef
     private Question question;
 
     public QuestionEntity(String socID, Question questions) {

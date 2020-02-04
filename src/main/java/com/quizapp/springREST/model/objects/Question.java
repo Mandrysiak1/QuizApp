@@ -1,5 +1,7 @@
 package com.quizapp.springREST.model.objects;
 
+import org.springframework.data.annotation.Id;
+
 import java.util.HashMap;
 
 public class Question {
@@ -9,6 +11,9 @@ public class Question {
         this.answers = answers;
         this.properAnswer = properAnswer;
     }
+
+    @Id
+    String id;
 
     String text;
     HashMap<Character,String> answers = new HashMap<>();
