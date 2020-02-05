@@ -65,6 +65,7 @@ public class GameService {
                 //gameService.sendGameState(gs,game_id);
                 //startNextRound();
 
+        game.getGameState();
                 sendGameState(game.getGs(),game.getGame_id());
                 counter++;
                 if (counter >= 20){
