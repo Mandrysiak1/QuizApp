@@ -51,7 +51,7 @@ public class GameService {
                     game.proceedAnserws();
                 }
 
-                System.out.println("no jestem se tuitaj siem amordasiod ofasd kutas");
+                System.out.println("no jestem se tuitabj siem amordasiod ofasd kutas");
                 game.roundNumber ++;
                 System.out.println(game.getQuestions().size() + " <-questions size");
                 System.out.println(game.getQuestions().get((game.getCurrentQuestionCounter())+2).getText() + "<- thats a question text");
