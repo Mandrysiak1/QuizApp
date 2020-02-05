@@ -6,9 +6,10 @@ import com.quizapp.springREST.services.SocketService;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 
 @Configurable
@@ -21,8 +22,6 @@ public class Game {
     @Autowired
     GameService gameService;
 
-    @Autowired
-    private SimpMessagingTemplate simpTemplate;
 
     @Autowired
     SocketService socketService;

@@ -111,9 +111,7 @@ public class GameService {
     }
 
     public void sendGameState(GameState gameState, String game_id) {
-        System.out.println("++++++++++++++++++++++++++++++" + game_id);
         socketService.echoMessage(gameState,game_id);
-       // simpTemplate.convertAndSend("/topic/games/"+game_id, gameState);
 
     }
 
