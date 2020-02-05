@@ -22,7 +22,7 @@ public class SocketService {
             System.out.println("XDDXDXDXDXDXDXDXDXDXDXDXD");
         }
         ///simpTemplate.convertAndSend("/topic/games/"+game_id , new GameState(message.getRoundNumber(),message.getQuestion(),message.getRanking()));
-        simpTemplate.convertAndSend("/topic/games/"+game_id , new EchoModel(game_id.trim());
+        simpTemplate.convertAndSend("/topic/games/"+game_id , new EchoModel(game_id.trim()));
 
     }
 }
