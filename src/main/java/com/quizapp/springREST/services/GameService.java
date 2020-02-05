@@ -41,7 +41,7 @@ public class GameService {
 
         int begin = 0;
         int timeInterval = 60000;
-        
+
 
 
         timer.schedule(new TimerTask() {
@@ -53,7 +53,7 @@ public class GameService {
                 System.out.println("Sheduler worked xd");
                 if (counter != 0) {
 
-                    game.proceedAnserws();
+                    //game.proceedAnserws();
                 }
 
 
