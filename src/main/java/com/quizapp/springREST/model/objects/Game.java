@@ -98,6 +98,7 @@ public class Game {
                 //startNextRound();
                 try{
 
+                    if(socketService == null ) System.out.println("jestes pojebany!");
                     socketService.echoMessage(gs,game_id);
                 }catch(NullPointerException e)
                 {
