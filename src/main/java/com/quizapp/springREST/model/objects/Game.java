@@ -2,6 +2,7 @@ package com.quizapp.springREST.model.objects;
 
 import com.quizapp.springREST.model.PlayerAnswers;
 import com.quizapp.springREST.services.GameService;
+import com.quizapp.springREST.services.SocketService;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -19,6 +20,9 @@ public class Game {
 
     @Autowired
     private SimpMessagingTemplate simpTemplate;
+
+    @Autowired
+    SocketService socketService;
 
     private String game_id;
     private GameState gs;
@@ -86,12 +90,13 @@ public class Game {
                 currentQuestion = questions.get((currentQuestionCounter++)+1);
 
                 System.out.println();
-                if(simpTemplate == null) System.out.println("1") ;else if( game_id == null) System.out.println("2"); else  if(gs ==null)
-                    System.out.println("3"); else
-                    System.out.println("ty no nie wiem jak tam twoja szmaciura");;
-                simpTemplate.convertAndSend("/topic/games/" + game_id, gs);
-                gameService.sendGameState(gs,game_id);
+//                if(simpTemplate == null) System.out.println("1") ;else if( game_id == null) System.out.println("2"); else  if(gs ==null)
+//                    System.out.println("3"); else
+//                    System.out.println("ty no nie wiem jak tam twoja szmaciura");;
+//                simpTemplate.convertAndSend("/topic/games/" + game_id, gs);
+                //gameService.sendGameState(gs,game_id);
                 //startNextRound();
+                    socketService.echoMessage(gs,game_id);
                 counter++;
                 if (counter >= 20){
                     timer.cancel();
