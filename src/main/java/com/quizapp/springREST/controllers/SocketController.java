@@ -1,9 +1,8 @@
 package com.quizapp.springREST.controllers;
 
 
-import com.quizapp.springREST.model.EchoModel;
-import com.quizapp.springREST.model.PlayerAnswers;
 import com.quizapp.springREST.model.NewGameBody;
+import com.quizapp.springREST.model.PlayerAnswers;
 import com.quizapp.springREST.services.GameService;
 import com.quizapp.springREST.services.SocketService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,11 +24,10 @@ class SocketController {
 
     @MessageMapping("/games/{game_id}")
     @SendTo("/topic/games/{game_id}")
-    EchoModel echoMessageMapping(@DestinationVariable String game_id, String message) {
+    void echoMessageMapping(@DestinationVariable String game_id, String message) {
        String x = message + game_id + "ASADADADADSADSAD===============================================================================================";
         System.out.println(x);
        // socketService.echoMessage(x.trim(),game_id);
-                return new EchoModel(x.trim());
     }
 
     @PostMapping("/games/{game_id}/new_game")
