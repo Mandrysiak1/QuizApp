@@ -67,52 +67,6 @@ public class Game {
 
 
         System.out.println("Start new Game");
-
-//        Timer timer = new Timer();
-//
-//        int begin = 0;
-//        int timeInterval = 60000;
-//
-//
-//        timer.schedule(new TimerTask() {
-//
-//            int counter = 0;
-//            @Override
-//            public void run() {
-//                System.out.println("Sheduler worked xd");
-//                if(counter != 0){
-//
-//                    proceedAnserws();
-//                }
-//
-//                System.out.println("no jestem se tuitaj siem amordasiod ofasd kutas");
-//                roundNumber ++;
-//                System.out.println(questions.size() + " <-questions size");
-//                System.out.println(questions.get((currentQuestionCounter++)+1).text + "<- thats a question text");
-//                currentQuestion = questions.get((currentQuestionCounter++)+1);
-//
-//                System.out.println();
-////                if(simpTemplate == null) System.out.println("1") ;else if( game_id == null) System.out.println("2"); else  if(gs ==null)
-////                    System.out.println("3"); else
-////                    System.out.println("ty no nie wiem jak tam twoja szmaciura");;
-////                simpTemplate.convertAndSend("/topic/games/" + game_id, gs);
-//                //gameService.sendGameState(gs,game_id);
-//                //startNextRound();
-//                try{
-//
-//                    if(socketService == null ) System.out.println("jestes pojebany!");
-//                    socketService.echoMessage(gs,game_id);
-//                }catch(NullPointerException e)
-//                {
-//                    e.printStackTrace();
-//                }
-//                counter++;
-//                if (counter >= 20){
-//                    timer.cancel();
-//                }
-//            }
-//        }, begin, timeInterval);
-
     }
 
 
