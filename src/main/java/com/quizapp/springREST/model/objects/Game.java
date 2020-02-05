@@ -101,7 +101,7 @@ public class Game {
                     socketService.echoMessage(gs,game_id);
                 }catch(NullPointerException e)
                 {
-                    System.out.println(e.printStackTrace();
+                    e.printStackTrace();
                 }
                 counter++;
                 if (counter >= 20){
