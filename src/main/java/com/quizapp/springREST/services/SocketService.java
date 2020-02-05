@@ -18,7 +18,7 @@ public class SocketService {
             System.out.println("nie chce zyc" +
                     "");
         }
-        simpTemplate.convertAndSend("/topic/games/"+game_id,message);
+        simpTemplate.convertAndSend("/topic/games/"+game_id , new GameState(message.getRoundNumber(),message.getQuestion(),message.getRanking()));
 
     }
 }
