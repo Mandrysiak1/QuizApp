@@ -96,7 +96,13 @@ public class Game {
 //                simpTemplate.convertAndSend("/topic/games/" + game_id, gs);
                 //gameService.sendGameState(gs,game_id);
                 //startNextRound();
+                try{
+
                     socketService.echoMessage(gs,game_id);
+                }catch(NullPointerException e)
+                {
+                    System.out.println(e.printStackTrace();
+                }
                 counter++;
                 if (counter >= 20){
                     timer.cancel();
