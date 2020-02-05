@@ -1,7 +1,6 @@
 package com.quizapp.springREST.model.objects;
 
 import lombok.Getter;
-import org.springframework.data.annotation.Id;
 
 import java.util.HashMap;
 
@@ -14,8 +13,8 @@ public class Question {
         this.properAnswer = properAnswer;
     }
 
-    @Id
-    String id;
+//    @Id
+//    String id;
 
     String text;
     HashMap<Character,String> answers = new HashMap<>();
