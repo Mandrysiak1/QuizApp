@@ -5,11 +5,14 @@ import com.quizapp.springREST.services.GameService;
 import com.quizapp.springREST.services.SocketService;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 
 @Getter
+@Bean
 public class Game {
 
 
