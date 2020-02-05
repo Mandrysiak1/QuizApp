@@ -28,7 +28,7 @@ class SocketController {
     EchoModel echoMessageMapping(@DestinationVariable String game_id, String message) {
        String x = message + game_id + "ASADADADADSADSAD===============================================================================================";
         System.out.println(x);
-        socketService.echoMessage(x.trim(),game_id);
+       // socketService.echoMessage(x.trim(),game_id);
                 return new EchoModel(x.trim());
     }
 
