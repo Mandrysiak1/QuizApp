@@ -1,6 +1,5 @@
 package com.quizapp.springREST.services;
 
-import com.quizapp.springREST.model.EchoModel;
 import com.quizapp.springREST.model.objects.GameState;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -21,8 +20,8 @@ public class SocketService {
         }else if(game_id == null){
             System.out.println("XDDXDXDXDXDXDXDXDXDXDXDXD");
         }
-        ///simpTemplate.convertAndSend("/topic/games/"+game_id , new GameState(message.getRoundNumber(),message.getQuestion(),message.getRanking()));
-        simpTemplate.convertAndSend("/topic/games/"+game_id , new EchoModel(game_id.trim()));
+        simpTemplate.convertAndSend("/topic/games/"+game_id , new GameState(message.getRoundNumber(),message.getQuestion(),message.getRanking()));
+        //simpTemplate.convertAndSend("/topic/games/"+game_id , new EchoModel(game_id.trim()));
 
     }
 }
