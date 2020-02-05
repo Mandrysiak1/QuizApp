@@ -13,6 +13,11 @@ public class SocketService {
 
     public void echoMessage(GameState message, String game_id) {
         System.out.println("+++++++++++++++++++++++++++++as+" + game_id);
+        if(simpTemplate == null)
+        {
+            System.out.println("nie chce zyc" +
+                    "");
+        }
         simpTemplate.convertAndSend("/topic/games/"+game_id,message);
 
     }
