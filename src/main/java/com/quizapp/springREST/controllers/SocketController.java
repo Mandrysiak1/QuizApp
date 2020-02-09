@@ -25,7 +25,7 @@ class SocketController {
     @MessageMapping("/games/{game_id}")
     @SendTo("/topic/games/{game_id}")
     void echoMessageMapping(@DestinationVariable String game_id, String message) {
-       String x = message + game_id + "ASADADADADSADSAD===============================================================================================";
+       String x = message + game_id + "ASADADADAhjhDSADSAD===============================================================================================";
         System.out.println(x);
        // socketService.echoMessage(x.trim(),game_id);
     }
