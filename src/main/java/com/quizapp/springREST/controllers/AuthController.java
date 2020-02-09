@@ -42,9 +42,9 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity login(@RequestBody AuthBody data) {
 
-        System.out.println("AUTHDATA: " +data.getEmail()+ " " + data.getPassword());
+        System.out.println("AUTHDATA: " +data.getEmail1()+ " " + data.getPassword());
         try {
-            String username = data.getEmail();
+            String username = data.getEmail1();
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, data.getPassword()));
             String token = jwtTokenProvider.createToken(username, this.users.findByEmail(username).getRoles());
             Map<Object, Object> model = new HashMap<>();
