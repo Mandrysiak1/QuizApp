@@ -29,9 +29,9 @@ public class SocietiesController {
     public void CreateNewSociety(@RequestParam String name ,@RequestParam String login)
     {
         Society newSociety = new Society(name);
-        User user = userRepository.findByEmail(login);
+        User user = userRepository.findByUsername(login);
         if (user == null) throw new InvalidKeyException("nie znaleziono użytkownika");
-        newSociety.addUser(userRepository.findByEmail(login));
+        newSociety.addUser(userRepository.findByUsername(login));
         societyManager.saveSociety(newSociety);
     }
 
@@ -39,7 +39,7 @@ public class SocietiesController {
     public ResponseEntity getUserSocieties(@RequestBody SocietyRequestBody login)
     {
         SocietyResponse societies;
-        societies  =  societyManager.getAllSocietesRelatedToUser(userRepository.findByEmail(login.getName()));
+        societies  =  societyManager.getAllSocietesRelatedToUser(userRepository.findByUsername(login.getName()));
 
         return ok(societies);
     }

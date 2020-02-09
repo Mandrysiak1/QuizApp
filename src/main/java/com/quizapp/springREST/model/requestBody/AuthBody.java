@@ -2,14 +2,25 @@ package com.quizapp.springREST.model.requestBody;
 
 public class AuthBody {
 
-    private String email;
+<<<<<<< HEAD
+    private String username;
     private String password;
 
-    public String getEmail() {
-        return email;
+    public String getUsername() {
+        return username;
     }
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUsername(String username) {
+        this.username = username;
+=======
+    private String email1;
+    private String password;
+
+    public String getEmail1() {
+        return email1;
+    }
+    public void setEmail1(String email1) {
+        this.email1 = email1;
+>>>>>>> temp
     }
     public String getPassword() {
         return password;
