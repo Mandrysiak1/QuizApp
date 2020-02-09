@@ -6,6 +6,9 @@ import com.quizapp.springREST.model.PlayerAnswers;
 import com.quizapp.springREST.services.GameService;
 import com.quizapp.springREST.services.SocketService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.handler.annotation.DestinationVariable;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +22,13 @@ class SocketController {
     @Autowired
     GameService gameService;
 
+    @MessageMapping("/games/{game_id}")
+    @SendTo("/topic/games/{game_id}")
+    void echoMessageMapping(@DestinationVariable String game_id, String message) {
+       String x = message + game_id + "ASADADADADSADSAD===============================================================================================";
+        System.out.println(x);
+       // socketService.echoMessage(x.trim(),game_id);
+    }
 
     @PostMapping("/games/{game_id}/new_game")
     void startNewGame(@RequestBody NewGameBody body) {

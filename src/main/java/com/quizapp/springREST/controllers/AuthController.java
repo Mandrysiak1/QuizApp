@@ -1,12 +1,11 @@
 package com.quizapp.springREST.controllers;
 
-import com.quizapp.springREST.Repositories.UserRepository;
-import com.quizapp.springREST.configs.JwtTokenProvider;
 import com.quizapp.springREST.model.objects.User;
+import com.quizapp.springREST.Repositories.UserRepository;
 import com.quizapp.springREST.model.requestBody.AuthBody;
+import com.quizapp.springREST.configs.JwtTokenProvider;
 import com.quizapp.springREST.services.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -28,10 +27,10 @@ import static org.springframework.http.ResponseEntity.ok;
 public class AuthController {
 
     @Autowired
-    AuthenticationManager authManager;
+    AuthenticationManager authenticationManager;
 
     @Autowired
-    JwtTokenProvider tokenProvider;
+    JwtTokenProvider jwtTokenProvider;
 
     @Autowired
     UserRepository users;
@@ -43,9 +42,9 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity login(@RequestBody AuthBody data) {
 
-
+        System.out.println("AUTHDATA: " +data.getEmail()+ " " + data.getPassword());
         try {
-            String username = data.getEmail1();
+            String username = data.getEmail();
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, data.getPassword()));
             String token = jwtTokenProvider.createToken(username, this.users.findByEmail(username).getRoles());
             Map<Object, Object> model = new HashMap<>();
@@ -60,12 +59,9 @@ public class AuthController {
     @SuppressWarnings("rawtypes")
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody User user) {
-
-        User userExists = userService.findUserByEmail(user.getUsername());
+        User userExists = userService.findUserByEmail(user.getEmail());
         if (userExists != null) {
-            return ResponseEntity
-                    .status(HttpStatus.FORBIDDEN)
-                    .body("User already exist");
+            throw new BadCredentialsException("User with username: " + user.getEmail() + " already exists");
         }
         userService.saveUser(user);
         Map<Object, Object> model = new HashMap<>();

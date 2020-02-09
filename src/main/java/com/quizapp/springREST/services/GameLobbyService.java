@@ -27,9 +27,9 @@ public class GameLobbyService {
     {
 
         Lobby lobby = new Lobby(socID);
-        lobby.setOwner(userRepository.findByUsername(playerName));
+        lobby.setOwner(userRepository.findByEmail(playerName));
         repositories.addLobby(lobby);
-        addPlayer(lobby.getId(),userRepository.findByUsername(playerName).getUsername());
+        addPlayer(lobby.getId(),userRepository.findByEmail(playerName).getEmail());
 
 
 
@@ -48,7 +48,7 @@ public class GameLobbyService {
         ArrayList<LobbyBody> bodies = new ArrayList<>();
 
         for (Lobby z : x) {
-            bodies.add(new LobbyBody(z.getPlayers().stream().map(User::getUsername).collect(Collectors.toList()), z.getId()));
+            bodies.add(new LobbyBody(z.getPlayers().stream().map(User::getEmail).collect(Collectors.toList()), z.getId()));
         }
 
         if(bodies.size() == 0)
@@ -65,15 +65,15 @@ public class GameLobbyService {
 
 
         Lobby x = repositories.getLobbies().stream().
-                filter(e -> e.getPlayers().contains(userRepository.findByUsername(playerName) ) ).
+                filter(e -> e.getPlayers().contains(userRepository.findByEmail(playerName) ) ).
                 findAny().orElse(null);
 
         if( x != null)
-        { removePlayer(userRepository.findByUsername(playerName),x);
-           repositories.getLobbyByID(lobbyID).addPlayer(userRepository.findByUsername(playerName));
+        { removePlayer(userRepository.findByEmail(playerName),x);
+           repositories.getLobbyByID(lobbyID).addPlayer(userRepository.findByEmail(playerName));
         }else
         {
-            repositories.getLobbyByID(lobbyID).addPlayer(userRepository.findByUsername(playerName));
+            repositories.getLobbyByID(lobbyID).addPlayer(userRepository.findByEmail(playerName));
         }
     }
 
