@@ -13,9 +13,6 @@ public class Question {
         this.properAnswer = properAnswer;
     }
 
-//    @Id
-//    String id;
-
     String text;
     HashMap<Character,String> answers = new HashMap<>();
     Character properAnswer;

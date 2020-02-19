@@ -1,8 +1,18 @@
 package com.quizapp.springREST.model.objects;
 
 public class GameState {
-    public int getRoundNumber() {
-        return roundNumber;
+
+    private int roundNumber;
+    private Question question;
+    private InGameRanking ranking;
+
+    public GameState(int roundNumber, Question question, InGameRanking ranking) {
+        this.roundNumber = roundNumber;
+        this.question = question;
+        this.ranking = ranking;
+    }
+        public int getRoundNumber() {
+            return roundNumber;
     }
 
     public void setRoundNumber(int roundNumber) {
@@ -25,13 +35,7 @@ public class GameState {
         this.ranking = ranking;
     }
 
-    private int roundNumber;
-    private Question question;
-    private InGameRanking ranking;
 
-    public GameState(int roundNumber, Question question, InGameRanking ranking) {
-        this.roundNumber = roundNumber;
-        this.question = question;
-        this.ranking = ranking;
-    }
-}
+
+  }
+

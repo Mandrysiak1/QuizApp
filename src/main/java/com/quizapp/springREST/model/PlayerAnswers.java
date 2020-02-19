@@ -13,6 +13,8 @@ public class PlayerAnswers {
 
     Character answer;
 
+    boolean isAnswered;
+
     HashMap<String,Integer> PlayerToInteger = new HashMap<>(); // - nie zgadnie + zgadnie , 0 brak obstawienia
 
     public String getUserID() {

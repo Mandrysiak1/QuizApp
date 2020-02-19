@@ -1,10 +1,10 @@
 package com.quizapp.springREST.services;
 
 
+import com.quizapp.springREST.Repositories.SocietyRepository;
 import com.quizapp.springREST.model.objects.Quest;
 import com.quizapp.springREST.model.objects.Society;
 import com.quizapp.springREST.model.objects.User;
-import com.quizapp.springREST.Repositories.SocietyRepository;
 import com.quizapp.springREST.model.serverResponse.SocietyEntity;
 import com.quizapp.springREST.model.serverResponse.SocietyResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 @Service("SocietyManager")
@@ -21,46 +20,43 @@ public class SocietyService {
     @Autowired
     SocietyRepository repository;
 
-
     public Society getSocietyByID(String id){
 
         Optional<Society> soc = repository.findById(id);
-        if(soc.isPresent())
-        {
-            return soc.get();
-        }else{
-            throw new IllegalArgumentException();
-        }
+
+        if(soc.isPresent()) { return soc.get();}
+        else{ throw new IllegalArgumentException(); }
     }
 
     public void saveSociety(Society society)
     {
         repository.save(society);
     }
+    public void removeSociety(String socID)
+    {
+        repository.deleteById(socID);
+    }
 
-    public SocietyResponse getAllSocietesRelatedToUser(User user){
+    public SocietyResponse getAllSocietiesRelatedToUser(User user){
 
         SocietyResponse societies = new SocietyResponse();
 
-        List<Society> societies1 = repository.findAll();
-//        return repository.findAll().stream().filter(e->e.getUsers().contains(user))
-//                                    .collect(Collectors.toList());
-
-        for (Society x: repository.findAll()
-             ) {
+        for (Society x: repository.findAll()) {
             if(x.getUsers().contains(user)){
                 societies.getSocietiesEntities().add(new SocietyEntity(x.getName(),x.getId()));
             }
-
-
         }
-
         return societies;
     }
 
     public void leaveSociety(User user,Society society)
     {
         society.removeUser(user);
+    }
+
+    public void addToSociety(User user, Society society) {
+        society.addUser(user);
+        repository.save(society);
     }
 
     @Scheduled(cron = "0 0 12 * * ?")
@@ -84,6 +80,7 @@ public class SocietyService {
         ArrayList<Quest>  quests = new ArrayList<>();
         return quests;
     }
+
 
 
 }

@@ -27,7 +27,6 @@ class SocketController {
     void echoMessageMapping(@DestinationVariable String game_id, String message) {
        String x = message + game_id + "ASADADADAhjhDSADSAD===============================================================================================";
         System.out.println(x);
-       // socketService.echoMessage(x.trim(),game_id);
     }
 
     @PostMapping("/games/{game_id}/new_game")
@@ -35,7 +34,7 @@ class SocketController {
 
         gameService.startNewGame(body.getGameID());
     }
-    @PostMapping("/games/{game_id}/post_anserws")
+    @PostMapping("/games/{game_id}/post_answers")
     void postAnserws(@RequestBody PlayerAnswers body )
     {
         gameService.postAnswers(body);

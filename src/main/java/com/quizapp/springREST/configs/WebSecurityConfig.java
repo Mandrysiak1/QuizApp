@@ -26,18 +26,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     JwtTokenProvider jwtTokenProvider;
 
-
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         UserDetailsService userDetailsService = mongoUserDetails();
         auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
-
-
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-       // http.sessionManagement().maximumSessions(1).sessionRegistry(sessionRegistry());
 
         http.httpBasic().disable().csrf().disable().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authorizeRequests()
@@ -51,16 +47,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .disable().exceptionHandling().authenticationEntryPoint(unauthorizedEntryPoint()).and()
                 .apply(new JwtConfigurer(jwtTokenProvider));
     }
-
-//    @Bean
-//    public SessionRegistry sessionRegistry() {
-//        return new SessionRegistryImpl();
-//    }
-//
-//    @Bean
-//    public ServletListenerRegistrationBean<HttpSessionEventPublisher> httpSessionEventPublisher() {
-//        return new ServletListenerRegistrationBean<HttpSessionEventPublisher>(new HttpSessionEventPublisher());
-//    }
 
     @Bean
     public PasswordEncoder bCryptPasswordEncoder() {

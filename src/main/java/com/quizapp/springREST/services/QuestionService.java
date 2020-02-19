@@ -29,6 +29,7 @@ public class QuestionService {
     public ArrayList<QuestionEntity> getAllQuestionsReletedToSoc(String socID)
     {
         return questionRepository.findAllBySocID(socID);
+
     }
 
 }

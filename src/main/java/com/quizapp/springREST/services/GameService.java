@@ -1,12 +1,11 @@
 package com.quizapp.springREST.services;
 
-import com.quizapp.springREST.model.*;
 import com.quizapp.springREST.Repositories.GameRepository;
 import com.quizapp.springREST.Repositories.LobbyRepository;
 import com.quizapp.springREST.Repositories.QuestionRepository;
+import com.quizapp.springREST.model.PlayerAnswers;
 import com.quizapp.springREST.model.objects.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -27,63 +26,58 @@ public class GameService {
 
     @Autowired
     SocketService socketService;
-    @Autowired
-    private SimpMessagingTemplate simpTemplate;
 
-
-    public void startNewGame(String lobbyID) {
+    public void  startNewGame(String lobbyID) {
 
         Lobby lobby = lobbyRepository.getLobbyByID(lobbyID);
         Game game = new Game(lobby, randomQuestion(lobby.getSocietyID()));
         gameRepository.AddNewGame(game);
+        lobbyRepository.removeLobby(lobbyID);
 
         Timer timer = new Timer();
 
         int begin = 0;
         int timeInterval = 60000;
 
-
-
         timer.schedule(new TimerTask() {
 
-            int counter = 0;
+            int counter = 1;
 
             @Override
             public void run() {
-                System.out.println("Sheduler worked xd");
-                if (counter != 0) {
 
-                    //game.proceedAnserws();
+                if (counter != 1) {
+
+                    game.proceedAnswers();
                 }
+                game.roundNumber = counter;
+                game.currentQuestion = game.getQuestions().get((counter -1)) ;
 
-
-                game.roundNumber++;
-
-                game.currentQuestion = game.getQuestions().get((game.getCurrentQuestionCounter()) + 2);
-
-                System.out.println();
-
-                game.getGameState();
+                //game.getGameState();
                 sendGameState(game.getGs(), game.getGame_id());
                 counter++;
-                if (counter >= 20) {
+                if (counter >= 11) {
                     timer.cancel();
+                    sendGameState(game.getGs(),game.getGame_id());
+//                    proceedGameEnd(game);
                 }
             }
+
+
         }, begin, timeInterval);
     }
 
 
-
+//    private void proceedGameEnd(Game game) {
+//        rankingSerice.update(game.getGameState());
+//        questService.update(game.getGameState());
+//        gameRepository.removeGame(game);
+//
+//    }
 
     public ArrayList<Question> randomQuestion(String id) {
 
-
-        System.out.println("random questions");
         ArrayList<Question>  q =  questionRepository.findAllBySocID(id).stream().map(QuestionEntity::getQuestion).collect(Collectors.toCollection(ArrayList::new));
-
-        System.out.println(q.size() + " <- question array size in randomQuestions");
-
         return getRandomElement(q,questionCount);
 
     }
@@ -92,29 +86,18 @@ public class GameService {
     {
         Random rand = new Random();
 
-        // create a temporary list for storing
-        // selected element
         ArrayList<Question> newList = new ArrayList<>();
         for (int i = 0; i < totalItems; i++) {
-
-            // take a raundom index between 0 to size
-            // of given List
             int randomIndex = rand.nextInt(list.size());
-
-            // add element in temporary list
             newList.add(list.get(randomIndex));
-
-            // Remove selected element from orginal list
             list.remove(randomIndex);
         }
         return newList;
     }
 
     public void sendGameState(GameState gameState, String game_id) {
-        socketService.echoMessage(gameState,game_id);
-
+        socketService.echoMessage(gameState, game_id);
     }
-
     public void postAnswers(PlayerAnswers body) {
          gameRepository.getActiveGameByID(body.getGameID()).addAnswers(body);
     }

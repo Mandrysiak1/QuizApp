@@ -16,5 +16,6 @@ public interface SocietyRepository extends MongoRepository<Society,String> {
     @Override
     Optional<Society> findById(String s);
 
-
+    @Override
+    void deleteById(String s);
 }

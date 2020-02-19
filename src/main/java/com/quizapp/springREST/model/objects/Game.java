@@ -39,51 +39,28 @@ public class Game {
 
     HashSet<PlayerAnswers> answers;
     public Game(Lobby lobby, ArrayList<Question> questions) {
-        System.out.println("START aNEW GAME CSTR)"
-        );
         this.lobby = lobby;
         this.game_id = lobby.getId();
         this.questions = questions;
-        if(this.questionHashset == null)
-            System.out.println("pls kill me");
-            else System.out.println(this.questions.size() + " <- size of question in cstr");
-
-
-        System.out.println(questions.size() + " <- size of question passed in cstr");
-        if(lobby ==null)
-        {
-            System.out.println("to to");
-
-        }else {
-            System.out.println("to nie to: " + lobby.getId());
-        }
-
         this.ranking = new InGameRanking();
         startGame();
     }
 
     private void startGame() {
-       // currentQuestion = questions.get(0);
-
-
-        System.out.println("Start new Game");
+        currentQuestion = questions.get(0);
     }
 
 
     public void getGameState() {
-        System.out.println("into get gameState");
         gs = new GameState(roundNumber,currentQuestion,ranking);
     }
 
     public boolean addAnswers(PlayerAnswers x){
-
         return answers.add(x);
-
     }
 
 
-
-    public void proceedAnserws() {
+    public void proceedAnswers() {
 
         HashMap<String,Boolean> isCorrect = new HashMap<String, Boolean>();
 
@@ -121,8 +98,4 @@ public class Game {
 
     }
 
-    private synchronized  void startNextRound() {
-
-        //return getGameState();
-    }
 }
