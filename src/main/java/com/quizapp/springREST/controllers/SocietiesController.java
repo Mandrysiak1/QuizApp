@@ -3,6 +3,7 @@ package com.quizapp.springREST.controllers;
 import com.quizapp.springREST.Repositories.UserRepository;
 import com.quizapp.springREST.model.objects.Society;
 import com.quizapp.springREST.model.objects.User;
+import com.quizapp.springREST.model.requestBody.SocietyLeaveRequest;
 import com.quizapp.springREST.model.requestBody.SocietyRequestBody;
 import com.quizapp.springREST.model.serverResponse.SocietyResponse;
 import com.quizapp.springREST.services.SocietyService;
@@ -49,27 +50,27 @@ public class SocietiesController {
     }
 
     @PostMapping("/leaveSociety")
-    public ResponseEntity LeaveSociety(@RequestParam String soc_id,@RequestParam String user_id)
+    public ResponseEntity LeaveSociety(@RequestBody SocietyLeaveRequest body)
     {
         User user;
-        if(userRepository.findById(user_id).isPresent())
-             user = userRepository.findById(user_id).get();
+        if(userRepository.findById(body.getUserID()).isPresent())
+             user = userRepository.findById(body.getSocID()).get();
         else return new ResponseEntity(HttpStatus.BAD_REQUEST);
 
-        societyManager.leaveSociety(user,societyManager.getSocietyByID(soc_id));
+        societyManager.leaveSociety(user,societyManager.getSocietyByID(body.getSocID()));
 
         return ok(true);
     }
 
     @PostMapping("/addUserToSociety")
-    public ResponseEntity AddUserToSociety(@RequestParam String soc_id,@RequestParam String user_id)
+    public ResponseEntity AddUserToSociety(@RequestBody SocietyLeaveRequest body)
     {
         User user;
-        if(userRepository.findById(user_id).isPresent())
-            user = userRepository.findById(user_id).get();
+        if(userRepository.findById(body.getUserID()).isPresent())
+            user = userRepository.findById(body.getUserID()).get();
         else return new ResponseEntity(HttpStatus.BAD_REQUEST);
 
-        societyManager.addToSociety(user,societyManager.getSocietyByID(soc_id));
+        societyManager.addToSociety(user,societyManager.getSocietyByID(body.getSocID()));
 
         return ok(true);
     }
