@@ -53,7 +53,7 @@ public class SocietiesController {
     public ResponseEntity LeaveSociety(@RequestBody SocietyLeaveRequest body)
     {
         User user;
-             user = userRepository.findById(body.getSocID()).get();
+             user = userRepository.findByEmail(body.getUserID());
         societyManager.leaveSociety(user,societyManager.getSocietyByID(body.getSocID()));
 
         return ok(true);
