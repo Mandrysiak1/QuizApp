@@ -52,6 +52,7 @@ public class SocietyService {
     public void leaveSociety(User user,Society society)
     {
         society.removeUser(user);
+        repository.save(society);
     }
 
     public void addToSociety(User user, Society society) {

@@ -46,6 +46,7 @@ public class Society {
     public void removeUser( User x)
     {
         users.remove(x);
+
     }
 
 }
