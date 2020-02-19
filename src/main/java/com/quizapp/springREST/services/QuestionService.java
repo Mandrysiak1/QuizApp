@@ -1,12 +1,11 @@
 package com.quizapp.springREST.services;
 
+import com.quizapp.springREST.Repositories.QuestionRepository;
 import com.quizapp.springREST.model.objects.Question;
 import com.quizapp.springREST.model.objects.QuestionEntity;
-import com.quizapp.springREST.Repositories.QuestionRepository;
+import com.quizapp.springREST.model.serverResponse.AllQuestionResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 
 @Service
 public class QuestionService {
@@ -26,9 +25,10 @@ public class QuestionService {
         questionRepository.deleteById(questionID);
     }
 
-    public ArrayList<QuestionEntity> getAllQuestionsReletedToSoc(String socID)
+    public AllQuestionResponse getAllQuestionsReletedToSoc(String socID)
     {
-        return questionRepository.findAllBySocID(socID);
+
+        return new AllQuestionResponse(questionRepository.findAllBySocID(socID));
 
     }
 

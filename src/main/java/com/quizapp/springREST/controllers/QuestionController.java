@@ -3,6 +3,7 @@ package com.quizapp.springREST.controllers;
 
 import com.quizapp.springREST.model.objects.QuestionEntity;
 import com.quizapp.springREST.model.requestBody.QuestionBody;
+import com.quizapp.springREST.model.serverResponse.AllQuestionResponse;
 import com.quizapp.springREST.services.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +21,7 @@ public class QuestionController {
 private QuestionService service;
 
     @PostMapping("/getAllQuestionsToSociety")
-    public List<QuestionEntity> getAllQuestions(@RequestBody QuestionBody question)
+    public AllQuestionResponse getAllQuestions(@RequestBody QuestionBody question)
     {
        return service.getAllQuestionsReletedToSoc(question.getSocID());
     }
