@@ -53,10 +53,7 @@ public class SocietiesController {
     public ResponseEntity LeaveSociety(@RequestBody SocietyLeaveRequest body)
     {
         User user;
-        if(userRepository.findById(body.getUserID()).isPresent())
              user = userRepository.findById(body.getSocID()).get();
-        else return new ResponseEntity(HttpStatus.BAD_REQUEST);
-
         societyManager.leaveSociety(user,societyManager.getSocietyByID(body.getSocID()));
 
         return ok(true);
